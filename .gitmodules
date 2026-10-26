@@ -1,0 +1,4 @@
+[submodule "external/batfish"]
+	path = external/batfish
+	url = git@github.com-dz7903:dz7903/batfish.git
+	branch = lean-batfish

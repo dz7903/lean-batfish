@@ -1,0 +1,31 @@
+name = "LeanBatfish"
+version = "0.1.0"
+defaultTargets = ["LeanBatfish", "lean-batfish-sim"]
+testDriver = "tests"
+
+# The semantics of Batfish's vendor-independent IR (API only).
+[[lean_lib]]
+name = "LeanBatfish"
+
+# The simulator: an executable of the semantics.
+[[lean_lib]]
+name = "LeanBatfishSim"
+
+[[lean_exe]]
+name = "lean-batfish-sim"
+root = "LeanBatfishSim.Main"
+
+# Unit tests for the library, in `tests/`; `lake test` builds them, and every `#guard`
+# must pass.
+[[lean_lib]]
+name = "tests"
+roots = []
+globs = ["tests.+"]
+
+# The Lean models of the networks in `networks/<name>/` and the properties proved about
+# them. Their `Model.lean` files read Batfish's exports in `data/` (see `tools/model.py`),
+# so this library is not a default target: export, then `lake build networks`.
+[[lean_lib]]
+name = "networks"
+roots = []
+globs = ["networks.+"]

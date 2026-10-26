@@ -1,0 +1,2 @@
+# pybatfish pinned to the commit bundled in batfish/allinone:test-2026.10.22.3852
+pybatfish @ git+https://github.com/batfish/pybatfish@ba66795
