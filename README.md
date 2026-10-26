@@ -82,8 +82,10 @@ tools/batfish/run.sh                         # start it on ports 9996/9997
 
 ## Usage
 
-Export Batfish's view of snapshots (its model, and its answers to the questions we
-compare) to `data/batfish/`:
+Export Batfish's view of snapshots: its model, and its answers to the questions we compare.
+The export of each of this repository's networks goes next to it, in `networks/<name>/export/`,
+and is tracked; the export of any other snapshot (such as Batfish's own tests) goes to
+`data/batfish/`, which is not:
 
 ```sh
 .venv/bin/python tools/export.py networks/example
@@ -93,7 +95,7 @@ compare) to `data/batfish/`:
 Ask the simulator questions about an exported snapshot:
 
 ```sh
-.lake/build/bin/lean-batfish-sim answer data/batfish/<snapshot> routes fibs bgpRib
+.lake/build/bin/lean-batfish-sim answer networks/example/export routes fibs bgpRib
 ```
 
 Compare the simulator's answers with Batfish's on every exported snapshot:
@@ -110,16 +112,18 @@ point), or check that the state Batfish converges to is a stable state of the dy
 .venv/bin/python tools/difftest.py --stable
 ```
 
-Generate the Lean models of the exported networks, then check their properties:
+Generate the Lean models of the exported networks; `lake build` then checks them and their
+properties:
 
 ```sh
 .venv/bin/python tools/model.py              # writes networks/<name>/Model.lean
-lake build networks
+lake build
 ```
 
-A generated `Model.lean` is one command, `batfish_snapshot Networks.Example from
-"data/batfish/..."`, which reads the export when the file is built and defines the snapshot,
-its network (`network.system`, `network.dataPlane`) and its converged state. Proofs about a
+A generated `Model.lean` is one command, `batfish_snapshot Networks.Example from "export"`,
+which reads the export next to it when the file is built and defines the snapshot, its
+network (`network.system`, `network.dataPlane`) and its converged state. Since the exports
+are tracked, building the models needs neither Batfish nor Docker. Proofs about a
 concrete network evaluate the semantics with `native_decide`.
 
 See which exported snapshots are inside the modeled subset, and why the others are not:

@@ -1,0 +1,5626 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Node of the FIB",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "VRF of the FIB",
+      "isKey": true,
+      "isValue": false,
+      "name": "VRF",
+      "schema": "String"
+     },
+     {
+      "description": "Network of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Network",
+      "schema": "Prefix"
+     },
+     {
+      "description": "Protocol of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Protocol",
+      "schema": "String"
+     },
+     {
+      "description": "Next hop of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Next_Hop",
+      "schema": "NextHop"
+     },
+     {
+      "description": "forward, discard, or next_vrf",
+      "isKey": true,
+      "isValue": false,
+      "name": "Action",
+      "schema": "String"
+     },
+     {
+      "description": "Outgoing interface, for forward",
+      "isKey": true,
+      "isValue": false,
+      "name": "Interface",
+      "schema": "String"
+     },
+     {
+      "description": "IP to ARP for, for forward",
+      "isKey": true,
+      "isValue": false,
+      "name": "Arp_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "VRF to look up in, for next_vrf",
+      "isKey": true,
+      "isValue": false,
+      "name": "Next_VRF",
+      "schema": "String"
+     }
+    ],
+    "textDesc": "${Node} | ${VRF} | ${Network} | ${Protocol} | ${Next_Hop} | ${Action} | ${Interface} | ${Arp_IP} | ${Next_VRF}"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.1.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.10.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "1.2.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "10.14.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "10.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border1",
+      "name": "as1border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.10.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "1.2.2.2/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "10.14.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "10.14.22.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.13.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1border2",
+      "name": "as1border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.13.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.10.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "1.2.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.2.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "1.0.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.2.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "10.14.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "1.0.2.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "1.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as1core1",
+      "name": "as1core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "1.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "aggregate",
+     "Next_Hop": {
+      "type": "discard"
+     },
+     "Action": "discard",
+     "Interface": null,
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border1",
+      "name": "as2border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "aggregate",
+     "Next_Hop": {
+      "type": "discard"
+     },
+     "Action": "discard",
+     "Interface": null,
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.12.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2border2",
+      "name": "as2border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.21.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.21.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.21.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.11.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.12.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.11.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.12.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.11.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.21.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.11.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.12.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.11.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core1",
+      "name": "as2core1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.12.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.12.12.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": "2.23.21.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.23.22.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2core2",
+      "name": "as2core2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.12.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.34.101.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.34.201.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.34.101.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.34.201.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.1.4.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.4/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.4/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.34.101.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.34.201.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.34.101.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dept1",
+      "name": "as2dept1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.34.201.3",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.34.101.4",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.34.101.4",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.11.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist1",
+      "name": "as2dist1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.12.11.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.34.201.4",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": "2.34.201.4",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "2.23.22.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as2dist2",
+      "name": "as2dist2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "2.23.12.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "10.23.21.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.1.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.10.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border1",
+      "name": "as3border1"
+     },
+     "VRF": "default",
+     "Network": "3.2.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.1.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.1.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.13.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "bgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "10.13.22.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.3/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.10.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.2.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.2.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3border2",
+      "name": "as3border2"
+     },
+     "VRF": "default",
+     "Network": "3.2.2.2/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.1.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "1.0.2.0/24",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.13.22.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "10.13.22.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.2.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Protocol": "ospfE2",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Protocol": "ibgp",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.23.21.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.1.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.0.2.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.1.1.1/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "3.0.1.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet1/0",
+     "Arp_IP": "3.0.1.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.10.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "3.2.2.2/32",
+     "Protocol": "ospf",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "3.0.2.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "3.0.2.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "90.90.90.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "90.90.90.0/24",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "90.90.90.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet2/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-as3core1",
+      "name": "as3core1"
+     },
+     "VRF": "default",
+     "Network": "90.90.90.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet3/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    }
+   ],
+   "summary": {
+    "notes": "Found 315 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 315
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.fibs.FibsQuestion",
+  "nodes": ".*",
+  "vrfs": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns the forwarding table (FIB) entries of the converged data plane.",
+   "instanceName": "__fibs",
+   "longDescription": "Lists, for each node and VRF, every FIB entry: the main-RIB route it comes from and the forwarding action (forward out an interface to an ARP IP, discard, or look up in another VRF).",
+   "orderedVariableNames": [
+    "nodes",
+    "vrfs"
+   ],
+   "tags": [
+    "dataplane",
+    "routing"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Examine FIBs on nodes matching this specifier.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    },
+    "vrfs": {
+     "allowedValues": [],
+     "description": "Examine FIBs of VRFs matching this name or regex.",
+     "displayName": "VRFs",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "vrf",
+     "value": ".*",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 315 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 315
+ }
+}

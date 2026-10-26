@@ -1,0 +1,21 @@
+{
+ "snapshot": "networks/drift-snapshot",
+ "source": "networks/drift-snapshot",
+ "batfish": {
+  "Batfish": "0.36.0",
+  "api_version": "0.0.0",
+  "source_commit": "d62c5131b1272bbc46e48b3ba0c23a19f8d12ba8"
+ },
+ "answers": {
+  "initIssues": "SUCCESS",
+  "viModel": "SUCCESS",
+  "layer3Edges": "SUCCESS",
+  "ospfEdges": "SUCCESS",
+  "bgpEdges": "SUCCESS",
+  "bgpSessionStatus": "SUCCESS",
+  "routes": "SUCCESS",
+  "bgpRib": "SUCCESS",
+  "fibs": "SUCCESS"
+ },
+ "errors": {}
+}

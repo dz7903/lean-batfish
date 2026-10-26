@@ -1,6 +1,6 @@
 name = "LeanBatfish"
 version = "0.1.0"
-defaultTargets = ["LeanBatfish", "lean-batfish-sim"]
+defaultTargets = ["LeanBatfish", "lean-batfish-sim", "networks"]
 testDriver = "tests"
 
 # The semantics of Batfish's vendor-independent IR (API only).
@@ -23,8 +23,7 @@ roots = []
 globs = ["tests.+"]
 
 # The Lean models of the networks in `networks/<name>/` and the properties proved about
-# them. Their `Model.lean` files read Batfish's exports in `data/` (see `tools/model.py`),
-# so this library is not a default target: export, then `lake build networks`.
+# them. Each `Model.lean` reads the Batfish export tracked next to it, in `export/`.
 [[lean_lib]]
 name = "networks"
 roots = []

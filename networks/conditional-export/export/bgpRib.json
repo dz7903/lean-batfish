@@ -1,0 +1,481 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Node",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "VRF name",
+      "isKey": true,
+      "isValue": false,
+      "name": "VRF",
+      "schema": "String"
+     },
+     {
+      "description": "Network for this route",
+      "isKey": true,
+      "isValue": true,
+      "name": "Network",
+      "schema": "Prefix"
+     },
+     {
+      "description": "Route's statuses",
+      "isKey": false,
+      "isValue": true,
+      "name": "Status",
+      "schema": "List<String>"
+     },
+     {
+      "description": "Route's Next Hop",
+      "isKey": false,
+      "isValue": true,
+      "name": "Next_Hop",
+      "schema": "NextHop"
+     },
+     {
+      "description": "Route's Protocol",
+      "isKey": false,
+      "isValue": true,
+      "name": "Protocol",
+      "schema": "String"
+     },
+     {
+      "description": "Route's AS path",
+      "isKey": false,
+      "isValue": true,
+      "name": "AS_Path",
+      "schema": "String"
+     },
+     {
+      "description": "Route's Metric",
+      "isKey": false,
+      "isValue": true,
+      "name": "Metric",
+      "schema": "Long"
+     },
+     {
+      "description": "Route's Local Preference",
+      "isKey": false,
+      "isValue": true,
+      "name": "Local_Pref",
+      "schema": "Long"
+     },
+     {
+      "description": "Route's List of communities",
+      "isKey": false,
+      "isValue": true,
+      "name": "Communities",
+      "schema": "List<String>"
+     },
+     {
+      "description": "Route's Origin protocol",
+      "isKey": false,
+      "isValue": true,
+      "name": "Origin_Protocol",
+      "schema": "String"
+     },
+     {
+      "description": "Route's Origin type",
+      "isKey": false,
+      "isValue": true,
+      "name": "Origin_Type",
+      "schema": "String"
+     },
+     {
+      "description": "Route's Originator ID",
+      "isKey": false,
+      "isValue": true,
+      "name": "Originator_Id",
+      "schema": "String"
+     },
+     {
+      "description": "IP of the neighbor who sent this route",
+      "isKey": true,
+      "isValue": true,
+      "name": "Received_From_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "Route's Received Path ID",
+      "isKey": true,
+      "isValue": true,
+      "name": "Received_Path_Id",
+      "schema": "Integer"
+     },
+     {
+      "description": "Route's Cluster List",
+      "isKey": false,
+      "isValue": true,
+      "name": "Cluster_List",
+      "schema": "Set<Long>"
+     },
+     {
+      "description": "Route's BGP Tunnel Encapsulation Attribute",
+      "isKey": false,
+      "isValue": true,
+      "name": "Tunnel_Encapsulation_Attribute",
+      "schema": "String"
+     },
+     {
+      "description": "Route's BGP Weight",
+      "isKey": false,
+      "isValue": true,
+      "name": "Weight",
+      "schema": "Integer"
+     },
+     {
+      "description": "Tag for this route",
+      "isKey": false,
+      "isValue": true,
+      "name": "Tag",
+      "schema": "Long"
+     }
+    ],
+    "textDesc": "Display RIB routes"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-c",
+      "name": "c"
+     },
+     "VRF": "default",
+     "Network": "1.0.0.0/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.1.1"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "1",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.1",
+     "Received_From_IP": "10.0.1.1",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-c",
+      "name": "c"
+     },
+     "VRF": "default",
+     "Network": "1.0.0.1/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.1.1"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "1",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.1",
+     "Received_From_IP": "10.0.1.1",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-c",
+      "name": "c"
+     },
+     "VRF": "default",
+     "Network": "2.0.0.0/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.2.1"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "2 22",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.2",
+     "Received_From_IP": "10.0.2.1",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-r",
+      "name": "r"
+     },
+     "VRF": "default",
+     "Network": "1.0.0.1/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.3.0"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "3 1",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.3",
+     "Received_From_IP": "10.0.3.0",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-r",
+      "name": "r"
+     },
+     "VRF": "default",
+     "Network": "2.0.0.1/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.3.0"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "3",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.3",
+     "Received_From_IP": "10.0.3.0",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-r",
+      "name": "r"
+     },
+     "VRF": "default",
+     "Network": "3.0.0.1/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.3.0"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "3",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.3",
+     "Received_From_IP": "10.0.3.0",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    },
+    {
+     "Node": {
+      "id": "node-s21",
+      "name": "s21"
+     },
+     "VRF": "default",
+     "Network": "2.0.0.0/32",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "10.0.22.1"
+     },
+     "Protocol": "bgp",
+     "AS_Path": "22",
+     "Metric": 0,
+     "Local_Pref": 100,
+     "Communities": [],
+     "Origin_Protocol": "bgp",
+     "Origin_Type": "igp",
+     "Originator_Id": "10.10.0.22",
+     "Received_From_IP": "10.0.22.1",
+     "Received_Path_Id": null,
+     "Cluster_List": null,
+     "Tag": null,
+     "Status": [
+      "BEST"
+     ],
+     "Tunnel_Encapsulation_Attribute": null,
+     "Weight": 0
+    }
+   ],
+   "summary": {
+    "notes": "Found 7 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 7
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.routes.RoutesQuestion",
+  "bgpRouteStatus": null,
+  "network": null,
+  "nodes": null,
+  "prefixMatchType": "EXACT",
+  "protocols": "all",
+  "rib": "BGP",
+  "vrfs": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns routes in the BGP RIB.",
+   "instanceName": "__bgpRib",
+   "longDescription": "Shows BGP routes for specified VRF and node(s). This question is not available in Batfish containers on dockerhub prior to March 29, 2021.",
+   "orderedVariableNames": [
+    "nodes",
+    "network",
+    "prefixMatchType",
+    "vrfs",
+    "status"
+   ],
+   "tags": [
+    "dataplane",
+    "routing"
+   ],
+   "variables": {
+    "network": {
+     "allowedValues": [],
+     "description": "Examine routes for networks matching this prefix.",
+     "displayName": "Network",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "prefix",
+     "values": []
+    },
+    "nodes": {
+     "allowedValues": [],
+     "description": "Examine routes on nodes matching this specifier.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    },
+    "prefixMatchType": {
+     "allowedValues": [
+      "EXACT",
+      "LONGER_PREFIXES",
+      "LONGEST_PREFIX_MATCH",
+      "SHORTER_PREFIXES"
+     ],
+     "description": "Use this prefix matching criterion: EXACT, LONGEST_PREFIX_MATCH, LONGER_PREFIXES, SHORTER_PREFIXES.",
+     "displayName": "Prefix match type",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "string",
+     "value": "EXACT",
+     "values": [
+      {
+       "description": null,
+       "name": "EXACT"
+      },
+      {
+       "description": null,
+       "name": "LONGEST_PREFIX_MATCH"
+      },
+      {
+       "description": null,
+       "name": "LONGER_PREFIXES"
+      },
+      {
+       "description": null,
+       "name": "SHORTER_PREFIXES"
+      }
+     ]
+    },
+    "status": {
+     "allowedValues": [],
+     "description": "Examine routes whose status matches this specifier.",
+     "displayName": "Status",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "bgpRouteStatusSpec",
+     "values": []
+    },
+    "vrfs": {
+     "allowedValues": [],
+     "description": "Examine routes on VRFs matching this name or regex.",
+     "displayName": "VRFs",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "vrf",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 7 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 7
+ }
+}

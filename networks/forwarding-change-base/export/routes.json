@@ -1,0 +1,2921 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Node",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "VRF name",
+      "isKey": true,
+      "isValue": false,
+      "name": "VRF",
+      "schema": "String"
+     },
+     {
+      "description": "Network for this route",
+      "isKey": true,
+      "isValue": true,
+      "name": "Network",
+      "schema": "Prefix"
+     },
+     {
+      "description": "Route's Next Hop",
+      "isKey": false,
+      "isValue": true,
+      "name": "Next_Hop",
+      "schema": "NextHop"
+     },
+     {
+      "description": "Route's Protocol",
+      "isKey": false,
+      "isValue": true,
+      "name": "Protocol",
+      "schema": "String"
+     },
+     {
+      "description": "Route's Metric",
+      "isKey": false,
+      "isValue": true,
+      "name": "Metric",
+      "schema": "Long"
+     },
+     {
+      "description": "Route's Admin distance",
+      "isKey": false,
+      "isValue": true,
+      "name": "Admin_Distance",
+      "schema": "Long"
+     },
+     {
+      "description": "Tag for this route",
+      "isKey": false,
+      "isValue": true,
+      "name": "Tag",
+      "schema": "Long"
+     }
+    ],
+    "textDesc": "Display RIB routes"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "discard"
+     },
+     "Protocol": "aggregate",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.11.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.22.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "discard"
+     },
+     "Protocol": "aggregate",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.12.21.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.11.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.12.3"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.11.1"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.21.1"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 102
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 102
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 102
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 102
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0",
+      "ip": "2.23.21.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 101
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0",
+      "ip": "2.23.22.3"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.1/32",
+     "Next_Hop": {
+      "type": "discard"
+     },
+     "Protocol": "static",
+     "Tag": null,
+     "Admin_Distance": 1,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.12.12.1"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.12.22.1"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-host-db",
+      "name": "host-db"
+     },
+     "VRF": "default",
+     "Network": "0.0.0.0/0",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0",
+      "ip": "2.128.0.2"
+     },
+     "Protocol": "static",
+     "Tag": null,
+     "Admin_Distance": 1,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-host-db",
+      "name": "host-db"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-host-db",
+      "name": "host-db"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-host-www",
+      "name": "host-www"
+     },
+     "VRF": "default",
+     "Network": "0.0.0.0/0",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0",
+      "ip": "2.128.1.2"
+     },
+     "Protocol": "static",
+     "Tag": null,
+     "Admin_Distance": 1,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-host-www",
+      "name": "host-www"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-host-www",
+      "name": "host-www"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "eth0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.4/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.4/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet3/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.21.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.34.101.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Protocol": "bgp",
+     "Tag": null,
+     "Admin_Distance": 20,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.101.4"
+     },
+     "Protocol": "bgp",
+     "Tag": null,
+     "Admin_Distance": 20,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.11.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.1.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.2.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0",
+      "ip": "2.23.22.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.1/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.1.3.2/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.12.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.12.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.12.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.12.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospf",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 3
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.23.22.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "connected",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.34.201.3/32",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet2/0"
+     },
+     "Protocol": "local",
+     "Tag": null,
+     "Admin_Distance": 0,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/16",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.1.1.1"
+     },
+     "Protocol": "ibgp",
+     "Tag": null,
+     "Admin_Distance": 200,
+     "Metric": 0
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.128.0.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "bgp",
+     "Tag": null,
+     "Admin_Distance": 20,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "2.128.1.0/30",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "2.34.201.4"
+     },
+     "Protocol": "bgp",
+     "Tag": null,
+     "Admin_Distance": 20,
+     "Metric": 50
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "10.12.11.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "VRF": "default",
+     "Network": "10.23.21.0/24",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet1/0",
+      "ip": "2.23.12.2"
+     },
+     "Protocol": "ospfE2",
+     "Tag": null,
+     "Admin_Distance": 110,
+     "Metric": 20
+    }
+   ],
+   "summary": {
+    "notes": "Found 163 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 163
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.routes.RoutesQuestion",
+  "bgpRouteStatus": null,
+  "network": null,
+  "nodes": null,
+  "prefixMatchType": "EXACT",
+  "protocols": "all",
+  "rib": "MAIN",
+  "vrfs": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns routing tables.",
+   "instanceName": "__routes",
+   "longDescription": "Shows routes for specified RIB, VRF, and node(s).",
+   "orderedVariableNames": [
+    "nodes",
+    "network",
+    "prefixMatchType",
+    "protocols",
+    "vrfs",
+    "rib"
+   ],
+   "tags": [
+    "dataplane",
+    "routing"
+   ],
+   "variables": {
+    "network": {
+     "allowedValues": [],
+     "description": "Return routes for networks matching this prefix.",
+     "displayName": "Network",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "prefix",
+     "values": []
+    },
+    "nodes": {
+     "allowedValues": [],
+     "description": "Return routes on nodes matching this specifier.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    },
+    "prefixMatchType": {
+     "allowedValues": [
+      "EXACT",
+      "LONGER_PREFIXES",
+      "LONGEST_PREFIX_MATCH",
+      "SHORTER_PREFIXES"
+     ],
+     "description": "Use this prefix matching criterion: EXACT, LONGEST_PREFIX_MATCH, LONGER_PREFIXES, SHORTER_PREFIXES.",
+     "displayName": "Prefix match type",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "string",
+     "value": "EXACT",
+     "values": [
+      {
+       "description": null,
+       "name": "EXACT"
+      },
+      {
+       "description": null,
+       "name": "LONGEST_PREFIX_MATCH"
+      },
+      {
+       "description": null,
+       "name": "LONGER_PREFIXES"
+      },
+      {
+       "description": null,
+       "name": "SHORTER_PREFIXES"
+      }
+     ]
+    },
+    "protocols": {
+     "allowedValues": [],
+     "description": "Return routes for protocols matching this specifier.",
+     "displayName": "Protocols",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "routingProtocolSpec",
+     "values": []
+    },
+    "rib": {
+     "allowedValues": [
+      "bgp",
+      "evpn",
+      "main"
+     ],
+     "description": "Only return routes from a given protocol RIB.",
+     "displayName": "RIB",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "string",
+     "values": [
+      {
+       "description": null,
+       "name": "main"
+      },
+      {
+       "description": null,
+       "name": "bgp"
+      },
+      {
+       "description": null,
+       "name": "evpn"
+      }
+     ]
+    },
+    "vrfs": {
+     "allowedValues": [],
+     "description": "Return routes on VRFs matching this name or regex.",
+     "displayName": "VRFs",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "vrf",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 163 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 163
+ }
+}

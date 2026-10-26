@@ -2,7 +2,9 @@
 
 For each snapshot this asks a running Batfish service for the vendor-independent
 model (`viModel`) and for the results of its own simulation (RIBs, sessions,
-edges), and writes the raw answers as JSON under `data/batfish/<snapshot-id>/`.
+edges), and writes the raw answers as JSON: for this repository's networks in
+`networks/<name>/export/` (tracked, and read by their Lean models), for other snapshots
+under `data/batfish/<snapshot-id>/`.
 
 Usage:
     .venv/bin/python tools/export.py SNAPSHOT_DIR [SNAPSHOT_DIR ...]
@@ -10,8 +12,7 @@ Usage:
 
 With `--discover`, every directory below the given roots that contains a
 `configs/` folder is treated as a snapshot. The snapshot id is its path relative
-to the Batfish checkout, or `lean-batfish/networks/<name>` for this repository's
-networks.
+to the Batfish checkout, or `networks/<name>` for this repository's networks.
 """
 
 import argparse
@@ -27,9 +28,8 @@ from pathlib import Path
 
 from pybatfish.client.session import Session
 
-ROOT = Path(__file__).resolve().parent.parent
-BATFISH_SRC = ROOT / "external" / "batfish"
-OUT = ROOT / "data" / "batfish"
+from common import BATFISH_SRC, EXPORT, ROOT, export_dir, snapshot_id
+
 NETWORK = "lean-batfish-corpus"
 
 # Questions whose answers we keep, by output file name.
@@ -52,18 +52,6 @@ def batfish_version(bf: Session) -> dict:
     return {**bf.get_component_versions(), "source_commit": commit}
 
 
-def snapshot_id(path: Path) -> str:
-    """Snapshots from the Batfish checkout keep their path there; this repository's own
-    networks are under `lean-batfish/`; anything else is named by its directory."""
-    path = path.resolve()
-    for base, prefix in ((BATFISH_SRC, ""), (ROOT, "lean-batfish/")):
-        try:
-            return prefix + str(path.relative_to(base.resolve()))
-        except ValueError:
-            pass
-    return path.name
-
-
 def discover(roots):
     found = []
     for root in roots:
@@ -73,20 +61,29 @@ def discover(roots):
     return found
 
 
-def export(bf: Session, path: Path, force: bool) -> dict:
+def source_name(path: Path) -> str:
+    """The snapshot's directory, relative to the repository when it is inside it."""
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path.resolve())
+
+
+def export(bf: Session, path: Path, force: bool, version: dict) -> dict:
     sid = snapshot_id(path)
-    out = OUT / sid
+    out = export_dir(path)
     if (out / "meta.json").exists() and not force:
         return json.loads((out / "meta.json").read_text())
     out.mkdir(parents=True, exist_ok=True)
-    meta = {"snapshot": sid, "source": str(path), "answers": {}, "errors": {}}
+    meta = {"snapshot": sid, "source": source_name(path), "batfish": version, "answers": {},
+            "errors": {}}
     start = time.time()
     name = "s"
     try:
-        # Upload the snapshot without the Lean modules that live next to it.
+        # Upload the snapshot without the Lean modules and the export that live next to it.
         with tempfile.TemporaryDirectory() as tmp:
             copy = Path(tmp) / path.name
-            shutil.copytree(path, copy, ignore=shutil.ignore_patterns("*.lean"))
+            shutil.copytree(path, copy, ignore=shutil.ignore_patterns("*.lean", EXPORT))
             bf.init_snapshot(str(copy), name=name, overwrite=True)
     except Exception as e:  # parse failures are data too
         meta["errors"]["init"] = "".join(traceback.format_exception_only(e)).strip()
@@ -94,7 +91,12 @@ def export(bf: Session, path: Path, force: bool) -> dict:
         for qname, make in QUESTIONS.items():
             try:
                 answer = dict(make(bf.q).answer(snapshot=name))
-                (out / f"{qname}.json").write_text(json.dumps(answer, indent=1))
+                # Batfish names each question instance randomly; a fixed name keeps exports
+                # stable.
+                instance = answer.get("question", {}).get("instance")
+                if isinstance(instance, dict) and "instanceName" in instance:
+                    instance["instanceName"] = f"__{qname}"
+                (out / f"{qname}.json").write_text(json.dumps(answer, indent=1) + "\n")
                 meta["answers"][qname] = answer.get("status", "?")
             except Exception as e:
                 meta["errors"][qname] = "".join(traceback.format_exception_only(e)).strip()
@@ -107,9 +109,8 @@ def export(bf: Session, path: Path, force: bool) -> dict:
         for candidate in (path / side, path / "batfish" / side):
             if candidate.exists():
                 shutil.copy(candidate, out / side)
-    meta["seconds"] = round(time.time() - start, 1)
-    (out / "meta.json").write_text(json.dumps(meta, indent=1))
-    return meta
+    (out / "meta.json").write_text(json.dumps(meta, indent=1) + "\n")
+    return {**meta, "seconds": round(time.time() - start, 1)}
 
 
 def main():
@@ -127,11 +128,9 @@ def main():
 
     bf = Session(host=args.host)
     bf.set_network(NETWORK)
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "batfish-version.json").write_text(json.dumps(batfish_version(bf), indent=1))
-
+    version = batfish_version(bf)
     for i, path in enumerate(snapshots, 1):
-        meta = export(bf, path, args.force)
+        meta = export(bf, path, args.force, version)
         status = "ok" if not meta["errors"] else "errors: " + ", ".join(meta["errors"])
         print(f"[{i}/{len(snapshots)}] {meta['snapshot']} ({meta.get('seconds')}s) {status}",
               flush=True)

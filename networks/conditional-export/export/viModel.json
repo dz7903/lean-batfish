@@ -1,0 +1,5370 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.question.VIModelQuestionPlugin$VIModelAnswerElement",
+   "nodes": {
+    "c": {
+     "configurationFormat": "FLAT_JUNIPER",
+     "exportBgpFromBgpRib": false,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "c",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "JUNIPER_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": null,
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "xe-0/0/1": {
+       "name": "xe-0/0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/1.0": {
+       "name": "xe-0/0/1.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.1.0/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.1.0/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.1.0/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/2": {
+       "name": "xe-0/0/2",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/2"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/2.0": {
+       "name": "xe-0/0/2.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.2.0/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.2.0/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/2.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.2.0/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/3": {
+       "name": "xe-0/0/3",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/3"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/3.0": {
+       "name": "xe-0/0/3.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.3.0/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.3.0/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/3.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.3.0/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {
+      "to-r:t1": {
+       "lines": [
+        {
+         "action": "PERMIT",
+         "ipWildcard": "1.0.0.1",
+         "lengthRange": "32-32"
+        }
+       ],
+       "name": "to-r:t1",
+       "vendorStructureId": null
+      },
+      "to-r:t2": {
+       "lines": [
+        {
+         "action": "PERMIT",
+         "ipWildcard": "2.0.0.1",
+         "lengthRange": "32-32"
+        }
+       ],
+       "name": "to-r:t2",
+       "vendorStructureId": null
+      },
+      "to-r:t3": {
+       "lines": [
+        {
+         "action": "PERMIT",
+         "ipWildcard": "3.0.0.1",
+         "lengthRange": "32-32"
+        }
+       ],
+       "name": "to-r:t3",
+       "vendorStructureId": null
+      },
+      "to-r:t4": {
+       "lines": [
+        {
+         "action": "PERMIT",
+         "ipWildcard": "4.0.0.1",
+         "lengthRange": "32-32"
+        }
+       ],
+       "name": "to-r:t4",
+       "vendorStructureId": null
+      }
+     },
+     "routingPolicies": {
+      "from-r": {
+       "name": "from-r",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-r term t",
+            "vendorStructureId": {
+             "filename": "configs/c",
+             "structureName": "from-r term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "from-s": {
+       "name": "from-s",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-s term t",
+            "vendorStructureId": {
+             "filename": "configs/c",
+             "structureName": "from-s term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-r": {
+       "name": "to-r",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t1",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.Conjunction",
+          "comment": null,
+          "conjuncts": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.TrackSucceeded",
+            "trackName": "~CONDITION~c1",
+            "comment": null
+           },
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+            "comment": null,
+            "prefix": {
+             "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+            },
+            "prefixSet": {
+             "class": "org.batfish.datamodel.routing_policy.expr.NamedPrefixSet",
+             "name": "to-r:t1"
+            }
+           }
+          ]
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-r term t1",
+              "vendorStructureId": {
+               "filename": "configs/c",
+               "structureName": "to-r term t1",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t2",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.Conjunction",
+          "comment": null,
+          "conjuncts": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.TrackSucceeded",
+            "trackName": "~CONDITION~c2",
+            "comment": null
+           },
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+            "comment": null,
+            "prefix": {
+             "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+            },
+            "prefixSet": {
+             "class": "org.batfish.datamodel.routing_policy.expr.NamedPrefixSet",
+             "name": "to-r:t2"
+            }
+           }
+          ]
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-r term t2",
+              "vendorStructureId": {
+               "filename": "configs/c",
+               "structureName": "to-r term t2",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t3",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.Conjunction",
+          "comment": null,
+          "conjuncts": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.TrackSucceeded",
+            "trackName": "~CONDITION~c3",
+            "comment": null
+           },
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+            "comment": null,
+            "prefix": {
+             "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+            },
+            "prefixSet": {
+             "class": "org.batfish.datamodel.routing_policy.expr.NamedPrefixSet",
+             "name": "to-r:t3"
+            }
+           }
+          ]
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-r term t3",
+              "vendorStructureId": {
+               "filename": "configs/c",
+               "structureName": "to-r term t3",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t4",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.Conjunction",
+          "comment": null,
+          "conjuncts": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.TrackSucceeded",
+            "trackName": "~CONDITION~c4",
+            "comment": null
+           },
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+            "comment": null,
+            "prefix": {
+             "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+            },
+            "prefixSet": {
+             "class": "org.batfish.datamodel.routing_policy.expr.NamedPrefixSet",
+             "name": "to-r:t4"
+            }
+           }
+          ]
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-r term t4",
+              "vendorStructureId": {
+               "filename": "configs/c",
+               "structureName": "to-r term t4",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-r term default-drop",
+            "vendorStructureId": {
+             "filename": "configs/c",
+             "structureName": "to-r term default-drop",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-s": {
+       "name": "to-s",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-s term t",
+            "vendorStructureId": {
+             "filename": "configs/c",
+             "structureName": "to-s term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.1.1/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.1.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-s",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.2.1/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.2.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-s",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.3.1/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.3.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-r",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.1.1/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.1.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-s",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.2.1/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.2.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-s",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.3.1/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.3.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-r",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_EXPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_EXPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_IMPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_IMPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {
+      "~CONDITION~c1": {
+       "class": "org.batfish.datamodel.tracking.TrackRoute",
+       "prefix": "1.0.0.0/32",
+       "protocols": [],
+       "ribType": "MAIN",
+       "vrf": "default"
+      },
+      "~CONDITION~c2": {
+       "class": "org.batfish.datamodel.tracking.TrackRoute",
+       "prefix": "2.0.0.0/32",
+       "protocols": [],
+       "ribType": "MAIN",
+       "vrf": "default"
+      },
+      "~CONDITION~c3": {
+       "class": "org.batfish.datamodel.tracking.TrackRoute",
+       "prefix": "3.0.0.0/32",
+       "protocols": [],
+       "ribType": "MAIN",
+       "vrf": "ri2"
+      },
+      "~CONDITION~c4": {
+       "class": "org.batfish.datamodel.tracking.TrackRoute",
+       "prefix": "4.0.0.0/32",
+       "protocols": [],
+       "ribType": "MAIN",
+       "vrf": "default"
+      }
+     },
+     "vendorFamily": {
+      "aws": null,
+      "cisco": null,
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": {
+       "lines": {
+        "auxiliary": {
+         "name": "auxiliary",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "AUX",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        },
+        "console": {
+         "name": "console",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "CON",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        }
+       },
+       "rootAuthenticationEncryptedPassword": null,
+       "systemAuthenticationOrder": {
+        "methods": [
+         "PASSWORD"
+        ]
+       },
+       "tacplusServers": {}
+      }
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": {
+        "clientToClientReflection": true,
+        "confederation": null,
+        "ebgpAdminCost": 170,
+        "ibgpAdminCost": 170,
+        "independentNetworkPolicy": null,
+        "localAdminCost": 170,
+        "localOriginationTypeTieBreaker": "NO_PREFERENCE",
+        "mainRibIndependentNetworkPolicy": null,
+        "networkNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributeNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributionPolicy": null,
+        "routerId": "10.10.0.3",
+        "aggregates": [],
+        "clusterListAsIbgpCost": false,
+        "dynamicNeighbors": {},
+        "interfaceNeighbors": {},
+        "multipathEbgp": false,
+        "multipathEquivalentAsPathMatchMode": "FIRST_AS",
+        "multipathIbgp": false,
+        "neighbors": {
+         "10.0.1.1": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427523,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "s1",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.1.1/32~",
+           "exportPolicySources": [
+            "to-s"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.1.1/32~",
+           "importPolicySources": [
+            "from-s"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 3,
+          "localIp": null,
+          "peerAddress": "10.0.1.1",
+          "remoteAsns": "1",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         },
+         "10.0.2.1": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427523,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "s2",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.2.1/32~",
+           "exportPolicySources": [
+            "to-s"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.2.1/32~",
+           "importPolicySources": [
+            "from-s"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 3,
+          "localIp": null,
+          "peerAddress": "10.0.2.1",
+          "remoteAsns": "2",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         },
+         "10.0.3.1": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427523,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "r",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.3.1/32~",
+           "exportPolicySources": [
+            "to-r"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.3.1/32~",
+           "importPolicySources": [
+            "from-r"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 3,
+          "localIp": null,
+          "peerAddress": "10.0.3.1",
+          "remoteAsns": "4",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         }
+        },
+        "nextHopIpResolverRestrictionPolicy": null,
+        "tableMapPolicy": null,
+        "tieBreaker": "ARRIVAL_ORDER",
+        "tracks": [
+         "~CONDITION~c1",
+         "~CONDITION~c4",
+         "~CONDITION~c2",
+         "~CONDITION~c3"
+        ]
+       },
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "2.0.0.1/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "3.0.0.1/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "4.0.0.1/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      },
+      "ri2": {
+       "name": "ri2",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "3.0.0.0/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "r": {
+     "configurationFormat": "FLAT_JUNIPER",
+     "exportBgpFromBgpRib": false,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "r",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "JUNIPER_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": null,
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "xe-0/0/1": {
+       "name": "xe-0/0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/1.0": {
+       "name": "xe-0/0/1.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.3.1/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.3.1/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.3.1/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "from-c": {
+       "name": "from-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-c term t",
+            "vendorStructureId": {
+             "filename": "configs/r",
+             "structureName": "from-c term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-c": {
+       "name": "to-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-c term t",
+            "vendorStructureId": {
+             "filename": "configs/r",
+             "structureName": "to-c term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.3.0/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.3.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.3.0/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.3.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_EXPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_EXPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_IMPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_IMPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": null,
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": {
+       "lines": {
+        "auxiliary": {
+         "name": "auxiliary",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "AUX",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        },
+        "console": {
+         "name": "console",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "CON",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        }
+       },
+       "rootAuthenticationEncryptedPassword": null,
+       "systemAuthenticationOrder": {
+        "methods": [
+         "PASSWORD"
+        ]
+       },
+       "tacplusServers": {}
+      }
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": {
+        "clientToClientReflection": true,
+        "confederation": null,
+        "ebgpAdminCost": 170,
+        "ibgpAdminCost": 170,
+        "independentNetworkPolicy": null,
+        "localAdminCost": 170,
+        "localOriginationTypeTieBreaker": "NO_PREFERENCE",
+        "mainRibIndependentNetworkPolicy": null,
+        "networkNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributeNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributionPolicy": null,
+        "routerId": "10.10.0.4",
+        "aggregates": [],
+        "clusterListAsIbgpCost": false,
+        "dynamicNeighbors": {},
+        "interfaceNeighbors": {},
+        "multipathEbgp": false,
+        "multipathEquivalentAsPathMatchMode": "FIRST_AS",
+        "multipathIbgp": false,
+        "neighbors": {
+         "10.0.3.0": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427524,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "c",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.3.0/32~",
+           "exportPolicySources": [
+            "to-c"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.3.0/32~",
+           "importPolicySources": [
+            "from-c"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 4,
+          "localIp": null,
+          "peerAddress": "10.0.3.0",
+          "remoteAsns": "3",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         }
+        },
+        "nextHopIpResolverRestrictionPolicy": null,
+        "tableMapPolicy": null,
+        "tieBreaker": "ARRIVAL_ORDER",
+        "tracks": []
+       },
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "s1": {
+     "configurationFormat": "FLAT_JUNIPER",
+     "exportBgpFromBgpRib": false,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "s1",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "JUNIPER_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": null,
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "xe-0/0/0": {
+       "name": "xe-0/0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/0.0": {
+       "name": "xe-0/0/0.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.1.1/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.1.1/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.1.1/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "from-c": {
+       "name": "from-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-c term t1",
+            "vendorStructureId": {
+             "filename": "configs/s1",
+             "structureName": "from-c term t1",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-c": {
+       "name": "to-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t1",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "static"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-c term t1",
+              "vendorStructureId": {
+               "filename": "configs/s1",
+               "structureName": "to-c term t1",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-c term t2",
+            "vendorStructureId": {
+             "filename": "configs/s1",
+             "structureName": "to-c term t2",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.1.0/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.1.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.1.0/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.1.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_EXPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_EXPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_IMPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_IMPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": null,
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": {
+       "lines": {
+        "auxiliary": {
+         "name": "auxiliary",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "AUX",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        },
+        "console": {
+         "name": "console",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "CON",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        }
+       },
+       "rootAuthenticationEncryptedPassword": null,
+       "systemAuthenticationOrder": {
+        "methods": [
+         "PASSWORD"
+        ]
+       },
+       "tacplusServers": {}
+      }
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": {
+        "clientToClientReflection": true,
+        "confederation": null,
+        "ebgpAdminCost": 170,
+        "ibgpAdminCost": 170,
+        "independentNetworkPolicy": null,
+        "localAdminCost": 170,
+        "localOriginationTypeTieBreaker": "NO_PREFERENCE",
+        "mainRibIndependentNetworkPolicy": null,
+        "networkNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributeNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributionPolicy": null,
+        "routerId": "10.10.0.1",
+        "aggregates": [],
+        "clusterListAsIbgpCost": false,
+        "dynamicNeighbors": {},
+        "interfaceNeighbors": {},
+        "multipathEbgp": false,
+        "multipathEquivalentAsPathMatchMode": "FIRST_AS",
+        "multipathIbgp": false,
+        "neighbors": {
+         "10.0.1.0": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427521,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "c",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.1.0/32~",
+           "exportPolicySources": [
+            "to-c"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.1.0/32~",
+           "importPolicySources": [
+            "from-c"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 1,
+          "localIp": null,
+          "peerAddress": "10.0.1.0",
+          "remoteAsns": "3",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         }
+        },
+        "nextHopIpResolverRestrictionPolicy": null,
+        "tableMapPolicy": null,
+        "tieBreaker": "ARRIVAL_ORDER",
+        "tracks": []
+       },
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "1.0.0.0/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "1.0.0.1/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "s21": {
+     "configurationFormat": "FLAT_JUNIPER",
+     "exportBgpFromBgpRib": false,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "s21",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "JUNIPER_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": null,
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "xe-0/0/0": {
+       "name": "xe-0/0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/0.0": {
+       "name": "xe-0/0/0.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.2.1/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.2.1/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.2.1/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/1": {
+       "name": "xe-0/0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/1.0": {
+       "name": "xe-0/0/1.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.22.0/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.22.0/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/1.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.22.0/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {
+      "to-c:t1": {
+       "lines": [
+        {
+         "action": "PERMIT",
+         "ipWildcard": "2.0.0.0",
+         "lengthRange": "32-32"
+        }
+       ],
+       "name": "to-c:t1",
+       "vendorStructureId": null
+      }
+     },
+     "routingPolicies": {
+      "from-c": {
+       "name": "from-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-c term t",
+            "vendorStructureId": {
+             "filename": "configs/s21",
+             "structureName": "from-c term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "from-s22": {
+       "name": "from-s22",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-s22 term t",
+            "vendorStructureId": {
+             "filename": "configs/s21",
+             "structureName": "from-s22 term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-c": {
+       "name": "to-c",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t1",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": null,
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.NamedPrefixSet",
+           "name": "to-c:t1"
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-c term t1",
+              "vendorStructureId": {
+               "filename": "configs/s21",
+               "structureName": "to-c term t1",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-c term t2",
+            "vendorStructureId": {
+             "filename": "configs/s21",
+             "structureName": "to-c term t2",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-s22": {
+       "name": "to-s22",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-s22 term t",
+            "vendorStructureId": {
+             "filename": "configs/s21",
+             "structureName": "to-s22 term t",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.2.0/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.2.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.22.1/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.22.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-s22",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.2.0/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.2.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-c",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.22.1/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.22.1/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-s22",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_EXPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_EXPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_IMPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_IMPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": null,
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": {
+       "lines": {
+        "auxiliary": {
+         "name": "auxiliary",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "AUX",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        },
+        "console": {
+         "name": "console",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "CON",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        }
+       },
+       "rootAuthenticationEncryptedPassword": null,
+       "systemAuthenticationOrder": {
+        "methods": [
+         "PASSWORD"
+        ]
+       },
+       "tacplusServers": {}
+      }
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": {
+        "clientToClientReflection": true,
+        "confederation": null,
+        "ebgpAdminCost": 170,
+        "ibgpAdminCost": 170,
+        "independentNetworkPolicy": null,
+        "localAdminCost": 170,
+        "localOriginationTypeTieBreaker": "NO_PREFERENCE",
+        "mainRibIndependentNetworkPolicy": null,
+        "networkNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributeNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributionPolicy": null,
+        "routerId": "10.10.0.2",
+        "aggregates": [],
+        "clusterListAsIbgpCost": false,
+        "dynamicNeighbors": {},
+        "interfaceNeighbors": {},
+        "multipathEbgp": false,
+        "multipathEquivalentAsPathMatchMode": "FIRST_AS",
+        "multipathIbgp": false,
+        "neighbors": {
+         "10.0.2.0": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427522,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "c",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.2.0/32~",
+           "exportPolicySources": [
+            "to-c"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.2.0/32~",
+           "importPolicySources": [
+            "from-c"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 2,
+          "localIp": null,
+          "peerAddress": "10.0.2.0",
+          "remoteAsns": "3",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         },
+         "10.0.22.1": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427522,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "s22",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.22.1/32~",
+           "exportPolicySources": [
+            "to-s22"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.22.1/32~",
+           "importPolicySources": [
+            "from-s22"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 2,
+          "localIp": null,
+          "peerAddress": "10.0.22.1",
+          "remoteAsns": "22",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         }
+        },
+        "nextHopIpResolverRestrictionPolicy": null,
+        "tableMapPolicy": null,
+        "tieBreaker": "ARRIVAL_ORDER",
+        "tracks": []
+       },
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "s22": {
+     "configurationFormat": "FLAT_JUNIPER",
+     "exportBgpFromBgpRib": false,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "s22",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "JUNIPER_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": null,
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "xe-0/0/0": {
+       "name": "xe-0/0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": null,
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "xe-0/0/0.0": {
+       "name": "xe-0/0/0.0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {
+        "10.0.22.1/31": {
+         "admin": null,
+         "generateConnectedRoute": null,
+         "generateLocalNullRouteIfDown": true,
+         "generateLocalRoutes": null,
+         "tag": null
+        }
+       },
+       "adminUp": true,
+       "allPrefixes": [
+        "10.0.22.1/31"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 10000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "xe-0/0/0.0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.0.22.1/31",
+       "proxyArp": false,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOGICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "from-s21": {
+       "name": "from-s21",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement from-s21 term t1",
+            "vendorStructureId": {
+             "filename": "configs/s22",
+             "structureName": "from-s21 term t1",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "to-s21": {
+       "name": "to-s21",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": "t1",
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "static"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+           "innerStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.If",
+             "comment": null,
+             "falseStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ExitAccept",
+               "comment": null
+              }
+             ],
+             "guard": {
+              "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+              "type": "CallExprContext",
+              "comment": null
+             },
+             "trueStatements": [
+              {
+               "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+               "type": "ReturnTrue",
+               "comment": null
+              }
+             ]
+            }
+           ],
+           "traceElement": {
+            "fragments": [
+             {
+              "class": "org.batfish.datamodel.TraceElement$TextFragment",
+              "text": "Matched "
+             },
+             {
+              "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+              "text": "policy-statement to-s21 term t1",
+              "vendorStructureId": {
+               "filename": "configs/s22",
+               "structureName": "to-s21 term t1",
+               "structureType": "policy-statement term"
+              }
+             }
+            ]
+           },
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.TraceableStatement",
+         "innerStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "traceElement": {
+          "fragments": [
+           {
+            "class": "org.batfish.datamodel.TraceElement$TextFragment",
+            "text": "Matched "
+           },
+           {
+            "class": "org.batfish.datamodel.TraceElement$LinkFragment",
+            "text": "policy-statement to-s21 term t2",
+            "vendorStructureId": {
+             "filename": "configs/s22",
+             "structureName": "to-s21 term t2",
+             "structureType": "policy-statement term"
+            }
+           }
+          ]
+         },
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "Return",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": []
+        }
+       ]
+      },
+      "~BGP_PEER_EXPORT_POLICY:default:10.0.22.0/32~": {
+       "name": "~BGP_PEER_EXPORT_POLICY:default:10.0.22.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_EXPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "local"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ]
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.SetOrigin",
+           "originType": {
+            "class": "org.batfish.datamodel.routing_policy.expr.LiteralOrigin",
+            "asNum": null,
+            "originType": "igp"
+           },
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": []
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "to-s21",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~BGP_PEER_IMPORT_POLICY:default:10.0.22.0/32~": {
+       "name": "~BGP_PEER_IMPORT_POLICY:default:10.0.22.0/32~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.SetDefaultPolicy",
+         "defaultPolicy": "~DEFAULT_BGP_IMPORT_POLICY~",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+         "type": "SetDefaultActionAccept",
+         "comment": null
+        },
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitReject",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.FirstMatchChain",
+          "subroutines": [
+           {
+            "class": "org.batfish.datamodel.routing_policy.expr.CallExpr",
+            "calledPolicyName": "from-s21",
+            "comment": null
+           }
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_EXPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_EXPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitReject",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnFalse",
+             "comment": null
+            }
+           ]
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchProtocol",
+          "protocols": [
+           "bgp",
+           "ibgp"
+          ],
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.If",
+           "comment": null,
+           "falseStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ExitAccept",
+             "comment": null
+            }
+           ],
+           "guard": {
+            "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+            "type": "CallExprContext",
+            "comment": null
+           },
+           "trueStatements": [
+            {
+             "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+             "type": "ReturnTrue",
+             "comment": null
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "~DEFAULT_BGP_IMPORT_POLICY~": {
+       "name": "~DEFAULT_BGP_IMPORT_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ExitAccept",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.BooleanExprs$StaticBooleanExpr",
+          "type": "CallExprContext",
+          "comment": null
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": null,
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": {
+       "lines": {
+        "auxiliary": {
+         "name": "auxiliary",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "AUX",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        },
+        "console": {
+         "name": "console",
+         "aaaAuthenticationLoginList": {
+          "methods": [
+           "PASSWORD"
+          ]
+         },
+         "execTimeoutMinutes": 0,
+         "execTimeoutSeconds": 0,
+         "inputAccessList": null,
+         "inputIpv6AccessList": null,
+         "lineType": "CON",
+         "loginAuthentication": null,
+         "outputAccessList": null,
+         "outputIpv6AccessList": null,
+         "transportInput": [],
+         "transportOutput": [],
+         "transportPreferred": []
+        }
+       },
+       "rootAuthenticationEncryptedPassword": null,
+       "systemAuthenticationOrder": {
+        "methods": [
+         "PASSWORD"
+        ]
+       },
+       "tacplusServers": {}
+      }
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": {
+        "clientToClientReflection": true,
+        "confederation": null,
+        "ebgpAdminCost": 170,
+        "ibgpAdminCost": 170,
+        "independentNetworkPolicy": null,
+        "localAdminCost": 170,
+        "localOriginationTypeTieBreaker": "NO_PREFERENCE",
+        "mainRibIndependentNetworkPolicy": null,
+        "networkNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributeNextHopIpTieBreaker": "HIGHEST_NEXT_HOP_IP",
+        "redistributionPolicy": null,
+        "routerId": "10.10.0.22",
+        "aggregates": [],
+        "clusterListAsIbgpCost": false,
+        "dynamicNeighbors": {},
+        "interfaceNeighbors": {},
+        "multipathEbgp": false,
+        "multipathEquivalentAsPathMatchMode": "FIRST_AS",
+        "multipathIbgp": false,
+        "neighbors": {
+         "10.0.22.0": {
+          "class": "org.batfish.datamodel.BgpActivePeerConfig",
+          "appliedRibGroup": null,
+          "authenticationSettings": {
+           "authenticationAlgorithm": "HMAC_SHA_1_96",
+           "authenticationKey": null,
+           "authenticationKeyChainName": null
+          },
+          "checkLocalIpOnAccept": true,
+          "clusterId": 168427542,
+          "confederationAs": null,
+          "defaultMetric": 0,
+          "description": null,
+          "ebgpMultihop": false,
+          "enforceFirstAs": false,
+          "evpnAddressFamily": null,
+          "generatedRoutes": [],
+          "group": "s21",
+          "ipv4UnicastAddressFamily": {
+           "addressFamilyCapabilities": {
+            "additionalPathsReceive": false,
+            "additionalPathsSelectAll": false,
+            "additionalPathsSend": false,
+            "advertiseExternal": false,
+            "advertiseInactive": false,
+            "allowLocalAsIn": false,
+            "allowRemoteAsOut": "EXCEPT_FIRST",
+            "sendCommunity": true,
+            "sendExtendedCommunity": true
+           },
+           "exportPolicy": "~BGP_PEER_EXPORT_POLICY:default:10.0.22.0/32~",
+           "exportPolicySources": [
+            "to-s21"
+           ],
+           "importPolicy": "~BGP_PEER_IMPORT_POLICY:default:10.0.22.0/32~",
+           "importPolicySources": [
+            "from-s21"
+           ],
+           "routeReflectorClient": false
+          },
+          "localAs": 22,
+          "localIp": null,
+          "peerAddress": "10.0.22.0",
+          "remoteAsns": "2",
+          "replaceNonLocalAsesOnExport": false,
+          "sessionVrf": null
+         }
+        },
+        "nextHopIpResolverRestrictionPolicy": null,
+        "tableMapPolicy": null,
+        "tieBreaker": "ARRIVAL_ORDER",
+        "tracks": []
+       },
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": null,
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 5,
+         "metric": 0,
+         "network": "2.0.0.0/32",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": false,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    }
+   },
+   "summary": null
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.VIModelQuestionPlugin$VIModelQuestion",
+  "nodes": null,
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Lists configuration attributes of nodes and edges in the network.",
+   "instanceName": "__viModel",
+   "longDescription": "Returns a JSON dictionary with all of the configuration parameters and neighbor relations stored in the vendor independent data-model.",
+   "orderedVariableNames": [],
+   "tags": [
+    "configuration"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Include nodes matching this name or regex.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 0
+ }
+}

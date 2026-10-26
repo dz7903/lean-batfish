@@ -5,18 +5,20 @@ import LeanBatfish.Model.ToExpr
 /-!
 # The `batfish_snapshot` command
 
-    batfish_snapshot Example from "data/batfish/lean-batfish/networks/example"
+    batfish_snapshot Networks.Example from "export"
 
-reads the snapshot that `tools/export.py` exported to that directory (relative to the
-package root) when the file is elaborated, and defines
+reads the snapshot that `tools/export.py` exported to that directory when the file is
+elaborated, and defines
 
-* `Example.snapshot`: the snapshot, as an ordinary Lean term;
-* `Example.network`: its network, a routing system with a data plane
+* `Networks.Example.snapshot`: the snapshot, as an ordinary Lean term;
+* `Networks.Example.network`: its network, a routing system with a data plane
   (`LeanBatfish.Model.Network`), modeling every device;
-* `Example.converged`: the state the network converges to from empty tables when nothing
-  is announced from outside, by synchronous iteration.
+* `Networks.Example.converged`: the state the network converges to from empty tables when
+  nothing is announced from outside, by synchronous iteration.
 
-Rebuilding after a new export picks up the new snapshot.
+A relative directory is relative to the folder of the file containing the command, so a
+network's `Model.lean` reads the export next to it. Rebuilding after a new export picks up
+the new snapshot.
 -/
 
 namespace LeanBatfish.Model
@@ -28,7 +30,10 @@ syntax (name := batfishSnapshot) "batfish_snapshot " ident " from " str : comman
 @[command_elab batfishSnapshot]
 def elabBatfishSnapshot : CommandElab := fun stx => do
   let ns := stx[1].getId
-  let some dir := stx[3].isStrLit? | throwError "expected a directory"
+  let some given := stx[3].isStrLit? | throwError "expected a directory"
+  let given : System.FilePath := given
+  let here := (System.FilePath.mk (← getFileName)).parent.getD "."
+  let dir := if given.isAbsolute then given else here / given
   let snapshot ← match ← liftIO (Decode.snapshot dir) with
     | .ok s => pure s
     | .error e => throwError "cannot read the snapshot in {dir}: {toString e}"

@@ -1,0 +1,99 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "The nodes that were converted (if applicable)",
+      "isKey": true,
+      "isValue": false,
+      "name": "Nodes",
+      "schema": "List<String>"
+     },
+     {
+      "description": "The files and lines that caused the issues (if applicable)",
+      "isKey": true,
+      "isValue": false,
+      "name": "Source_Lines",
+      "schema": "List<FileLines>"
+     },
+     {
+      "description": "The type of issues identified",
+      "isKey": true,
+      "isValue": false,
+      "name": "Type",
+      "schema": "String"
+     },
+     {
+      "description": "Details about the issues identified",
+      "isKey": false,
+      "isValue": true,
+      "name": "Details",
+      "schema": "String"
+     },
+     {
+      "description": "The text of the input files that caused the issues (if applicable)",
+      "isKey": false,
+      "isValue": true,
+      "name": "Line_Text",
+      "schema": "String"
+     },
+     {
+      "description": "Batfish parser state when issues were encountered (if applicable)",
+      "isKey": false,
+      "isValue": true,
+      "name": "Parser_Context",
+      "schema": "String"
+     }
+    ],
+    "textDesc": "${Nodes} | ${Source_Lines} | ${Type}"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Nodes": [
+      "multiple_as_mixed_conflict"
+     ],
+     "Source_Lines": null,
+     "Type": "Convert warning (redflag)",
+     "Details": "Currently do not support mixed multipath-multiple-as/non-multipath-multiple-as bgpgroups on Juniper - FORCING NON-MULTIPATH-MULTIPLE-AS",
+     "Line_Text": null,
+     "Parser_Context": null
+    }
+   ],
+   "summary": {
+    "notes": "Found 1 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 1
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.initialization.InitIssuesQuestion",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns issues encountered when processing the snapshot.",
+   "instanceName": "__initIssues",
+   "longDescription": "Reports issues encountered by Batfish, including failure to recognize certain lines in the configuration, lack of support for certain features, and errors when converting to vendor-independent models.",
+   "orderedVariableNames": [],
+   "tags": [
+    "initialization"
+   ],
+   "variables": {}
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 1 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 1
+ }
+}

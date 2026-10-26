@@ -1,7 +1,8 @@
 """Summarize which parts of Batfish's IR appear in the exported corpus.
 
-Walks every `data/batfish/**/viModel.json` and reports, for each kind of IR object,
-the fields it has and how many snapshots use each field, with a few example values.
+Walks every exported `viModel.json` (in `networks/*/export/` and `data/batfish/`) and
+reports, for each kind of IR object, the fields it has and how many snapshots use each
+field, with a few example values.
 An object's kind is its `class` tag if it has one, otherwise the field path leading to
 it (with name-keyed maps collapsed to `*`).
 
@@ -14,8 +15,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data" / "batfish"
+from common import export_id, exports
 
 # Fields whose JSON value is an object keyed by names (hostnames, VRFs, policies, IPs, ...).
 MAP_FIELDS = {
@@ -77,9 +77,9 @@ def main():
     args = ap.parse_args()
 
     stats = defaultdict(new_entry)
-    files = sorted(DATA.rglob("viModel.json"))
+    files = [e / "viModel.json" for e in exports()]
     for f in files:
-        snapshot = str(f.parent.relative_to(DATA))
+        snapshot = export_id(f.parent)
         answer = json.loads(f.read_text())
         for elem in answer.get("answerElements", []):
             for host, config in elem.get("nodes", {}).items():

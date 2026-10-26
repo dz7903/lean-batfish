@@ -1,0 +1,458 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Node from which the edge originates",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "IP at the side of originator",
+      "isKey": true,
+      "isValue": false,
+      "name": "IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "Interface at which the edge originates",
+      "isKey": false,
+      "isValue": true,
+      "name": "Interface",
+      "schema": "String"
+     },
+     {
+      "description": "AS Number at the side of originator",
+      "isKey": false,
+      "isValue": true,
+      "name": "AS_Number",
+      "schema": "String"
+     },
+     {
+      "description": "Node at which the edge terminates",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_Node",
+      "schema": "Node"
+     },
+     {
+      "description": "IP at the side of the responder",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "Interface at which the edge terminates",
+      "isKey": false,
+      "isValue": true,
+      "name": "Remote_Interface",
+      "schema": "String"
+     },
+     {
+      "description": "AS Number at the side of responder",
+      "isKey": false,
+      "isValue": true,
+      "name": "Remote_AS_Number",
+      "schema": "String"
+     }
+    ],
+    "textDesc": "Display Edges"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "IP": "2.1.1.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "Remote_IP": "2.1.2.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "IP": "2.34.201.4",
+     "Interface": null,
+     "AS_Number": 65001,
+     "Remote_Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "Remote_IP": "2.34.201.3",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "IP": "2.1.2.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "Remote_IP": "2.1.1.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "IP": "2.1.2.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "Remote_IP": "2.1.1.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "IP": "2.1.2.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "Remote_IP": "2.1.3.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "IP": "2.1.1.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "Remote_IP": "2.1.2.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "IP": "2.1.3.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "Remote_IP": "2.1.2.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "IP": "2.34.101.3",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "Remote_IP": "2.34.101.4",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 65001
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "IP": "2.34.201.3",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "Remote_IP": "2.34.201.4",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 65001
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "IP": "2.1.2.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "Remote_IP": "2.1.3.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "IP": "2.1.1.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "Remote_IP": "2.1.2.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "IP": "2.1.1.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "Remote_IP": "2.1.2.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "IP": "2.1.2.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "Remote_IP": "2.1.3.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "IP": "2.1.2.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-border1",
+      "name": "border1"
+     },
+     "Remote_IP": "2.1.1.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-leaf1",
+      "name": "leaf1"
+     },
+     "IP": "2.34.101.4",
+     "Interface": null,
+     "AS_Number": 65001,
+     "Remote_Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "Remote_IP": "2.34.101.3",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine2",
+      "name": "spine2"
+     },
+     "IP": "2.1.3.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "Remote_IP": "2.1.2.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "IP": "2.1.3.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "Remote_IP": "2.1.2.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "IP": "2.1.3.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "Remote_IP": "2.1.2.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core1",
+      "name": "core1"
+     },
+     "IP": "2.1.2.1",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-spine1",
+      "name": "spine1"
+     },
+     "Remote_IP": "2.1.3.1",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    },
+    {
+     "Node": {
+      "id": "node-core2",
+      "name": "core2"
+     },
+     "IP": "2.1.2.2",
+     "Interface": null,
+     "AS_Number": 2,
+     "Remote_Node": {
+      "id": "node-border2",
+      "name": "border2"
+     },
+     "Remote_IP": "2.1.1.2",
+     "Remote_Interface": null,
+     "Remote_AS_Number": 2
+    }
+   ],
+   "summary": {
+    "notes": "Found 20 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 20
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.edges.EdgesQuestion",
+  "edgeType": "BGP",
+  "initial": false,
+  "nodes": ".*",
+  "remoteNodes": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns BGP adjacencies.",
+   "instanceName": "__bgpEdges",
+   "longDescription": "Lists all BGP adjacencies in the network.",
+   "orderedVariableNames": [
+    "nodes",
+    "remoteNodes"
+   ],
+   "tags": [
+    "bgp",
+    "topology"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Include adjacencies whose first node matches this name or regex.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    },
+    "remoteNodes": {
+     "allowedValues": [],
+     "description": "Include adjacencies whose second node matches this name or regex.",
+     "displayName": "Remote Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 20 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 20
+ }
+}

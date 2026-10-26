@@ -17,8 +17,7 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data" / "batfish"
+from common import EXPORT, ROOT, export_id, exports
 SIM = ROOT / ".lake" / "build" / "bin" / "lean-batfish-sim"
 
 # Snapshot entries that only carry device configurations, or are not read by Batfish.
@@ -29,7 +28,7 @@ CONFIG_DIRS = {"configs", "hosts", "iptables"}
 # nodes) and the adjacencies (layer-1 topology).
 MODELED_INPUTS = {"external_bgp_announcements.json", "interface_blacklist", "runtime_data.json",
                   "layer1_topology.json", "isp_config.json", "aws_configs", "azure_configs"}
-NOT_INPUTS = {"README.md", "BUILD.bazel", "BUILD", ".gitignore"}
+NOT_INPUTS = {"README.md", "BUILD.bazel", "BUILD", ".gitignore", EXPORT}
 # Lean modules about a network (`Model.lean`, `Properties.lean`) live next to its snapshot.
 NOT_INPUT_SUFFIXES = (".png", ".jpg", ".svg", ".lean")
 
@@ -72,20 +71,20 @@ def main():
     ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
 
-    files = sorted(DATA.rglob("viModel.json"))
+    files = [e / "viModel.json" for e in exports()]
     out = subprocess.run([SIM, "decode", *map(str, files)], capture_output=True, text=True).stdout
     decoded = dict(line.split("\t", 1) for line in out.splitlines())
 
     results = []
     for f in files:
-        sid = str(f.parent.relative_to(DATA))
+        sid = export_id(f.parent)
         meta = json.loads((f.parent / "meta.json").read_text())
         nodes = json.loads(f.read_text())["answerElements"][0]["nodes"]
         formats = sorted({n["configurationFormat"] for n in nodes.values()})
         bgp = any(v.get("bgpProcess") for n in nodes.values() for v in n.get("vrfs", {}).values())
         ospf = any(v.get("ospfProcesses") for n in nodes.values() for v in n.get("vrfs", {}).values())
         verdict = decoded.get(str(f), "missing")
-        extras = side_inputs(Path(meta["source"]))
+        extras = side_inputs(ROOT / meta["source"])
         if verdict.startswith("ok") and extras:
             verdict = "unsupported: side inputs are not modeled (" + ", ".join(extras) + ")"
         if verdict.startswith("ok") and meta["errors"]:

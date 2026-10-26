@@ -16,10 +16,9 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+from common import ROOT, export_id, exports
 from scan import side_inputs
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data" / "batfish"
 SIM = ROOT / ".lake" / "build" / "bin" / "lean-batfish-sim"
 
 QUESTIONS = ["routes", "fibs", "bgpRib"]
@@ -41,13 +40,13 @@ def compare(expected: Counter, actual: Counter) -> dict:
 
 
 def check(snapshot: Path, dynamics: bool = False) -> dict:
-    sid = str(snapshot.relative_to(DATA))
+    sid = export_id(snapshot)
     meta = json.loads((snapshot / "meta.json").read_text())
     result = {"snapshot": sid, "questions": {}}
     if meta["errors"]:
         result["status"] = "batfish errors: " + ", ".join(meta["errors"])
         return result
-    extras = side_inputs(Path(meta["source"]))
+    extras = side_inputs(ROOT / meta["source"])
     if extras:
         result["status"] = "side inputs: " + ", ".join(extras)
         return result
@@ -75,11 +74,11 @@ def check(snapshot: Path, dynamics: bool = False) -> dict:
 
 def check_stable(snapshot: Path) -> dict:
     """Whether the simulator's converged state is a stable state of the declarative dynamics."""
-    sid = str(snapshot.relative_to(DATA))
+    sid = export_id(snapshot)
     meta = json.loads((snapshot / "meta.json").read_text())
     if meta["errors"]:
         return {"snapshot": sid, "status": "batfish errors"}
-    if side_inputs(Path(meta["source"])):
+    if side_inputs(ROOT / meta["source"]):
         return {"snapshot": sid, "status": "side inputs"}
     out = subprocess.run([SIM, "check-stable", str(snapshot)], capture_output=True, text=True)
     try:
@@ -107,7 +106,7 @@ def main():
                          "point, instead of the simulator's engine")
     args = ap.parse_args()
 
-    snapshots = sorted(p.parent for p in DATA.rglob("viModel.json"))
+    snapshots = exports()
     if args.filters:
         snapshots = [s for s in snapshots if any(f in str(s) for f in args.filters)]
     if args.stable:
