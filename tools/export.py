@@ -82,10 +82,10 @@ def export(bf: Session, path: Path, force: bool, version: dict) -> dict:
     start = time.time()
     name = "s"
     try:
-        # Upload the snapshot without the Lean modules and the export that live next to it.
+        # Upload the snapshot without the Lean modules, diagrams and export that live next to it.
         with tempfile.TemporaryDirectory() as tmp:
             copy = Path(tmp) / path.name
-            shutil.copytree(path, copy, ignore=shutil.ignore_patterns("*.lean", EXPORT))
+            shutil.copytree(path, copy, ignore=shutil.ignore_patterns("*.lean", "*.pdf", EXPORT))
             bf.init_snapshot(str(copy), name=name, overwrite=True)
     except Exception as e:  # parse failures are data too
         meta["errors"]["init"] = "".join(traceback.format_exception_only(e)).strip()
