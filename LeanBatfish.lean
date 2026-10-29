@@ -18,6 +18,7 @@ import LeanBatfish.IR.RoutingPolicy.Statement
 import LeanBatfish.IR.NextHop
 import LeanBatfish.IR.Ospf
 import LeanBatfish.IR.Interface
+import LeanBatfish.IR.Ipsec
 import LeanBatfish.IR.Bgp
 import LeanBatfish.IR.Configuration
 import LeanBatfish.Decode.Net
@@ -25,6 +26,7 @@ import LeanBatfish.Decode.Acl
 import LeanBatfish.Decode.RoutingPolicy
 import LeanBatfish.Decode.Bgp
 import LeanBatfish.Decode.Ospf
+import LeanBatfish.Decode.Ipsec
 import LeanBatfish.Decode.Interface
 import LeanBatfish.Decode.Configuration
 import LeanBatfish.Data.Regex
@@ -34,6 +36,8 @@ import LeanBatfish.Semantics.Policy.Eval
 import LeanBatfish.Semantics.Routing.Rib
 import LeanBatfish.Semantics.Routing.Static
 import LeanBatfish.Semantics.Forwarding.Fib
+import LeanBatfish.Semantics.Forwarding.Acl
+import LeanBatfish.Semantics.Ipsec
 import LeanBatfish.Topology.Edge
 import LeanBatfish.Decode.Topology
 import LeanBatfish.Semantics.Routing.Ospf
@@ -58,6 +62,7 @@ import LeanBatfish.IR.Snapshot
 import LeanBatfish.Decode.Snapshot
 import LeanBatfish.Model.ToExpr
 import LeanBatfish.Model.Router
+import LeanBatfish.Model.Forwarding
 import LeanBatfish.Model.Network
 import LeanBatfish.Model.Command
 import LeanBatfish.Reasoning.Policy
@@ -66,3 +71,4 @@ import LeanBatfish.Reasoning.Accept
 import LeanBatfish.Reasoning.Transfer
 import LeanBatfish.Reasoning.Selection
 import LeanBatfish.Reasoning.Confinement
+import LeanBatfish.Reasoning.Forwarding

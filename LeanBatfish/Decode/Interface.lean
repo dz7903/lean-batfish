@@ -1,3 +1,4 @@
+import LeanBatfish.Decode.Ipsec
 import LeanBatfish.Decode.Ospf
 import LeanBatfish.IR.Interface
 
@@ -7,7 +8,8 @@ import LeanBatfish.IR.Interface
 Layer-2 settings (switchports, VLANs, port channels) are accepted but not modeled: they
 only influence the layer-3 topology, which the simulator currently takes from Batfish.
 Features that change forwarding or address ownership — NAT, policy-based routing,
-zones, HSRP/VRRP, tunnels — are rejected.
+zones, HSRP/VRRP — are rejected. Crypto maps and tunnel endpoints are read; IPsec is
+decoded with the configuration (`Decode.Ipsec`).
 -/
 
 namespace LeanBatfish.Decode
@@ -36,7 +38,6 @@ def «interface» : Decoder Interface := object do
     "allowedVlans", "nativeVlan", "encapsulationVlan", "vlan", "channelGroup",
     "channelGroupMembers", "mlagId"]
   gate "additionalArpIps" "additional ARP IPs" isEmptyIpSpace
-  gateEmpty "cryptoMap" "IPsec crypto maps"
   gateEmpty "eigrp" "EIGRP"
   gateEmpty "firewallSessionInterfaceInfo" "firewall sessions"
   gateEmpty "hmm" "host mobility (HMM) routes"
@@ -50,7 +51,6 @@ def «interface» : Decoder Interface := object do
   gateEmpty "postTransformationIncomingFilter" "post-NAT filters"
   gateEmpty "preTransformationOutgoingFilter" "pre-NAT filters"
   gateEmpty "routingPolicy" "policy-based routing"
-  gateEmpty "tunnelConfig" "tunnels"
   gateEmpty "vrrpGroups" "VRRP"
   gateEmpty "zone" "firewall zones"
   let metadata ← dflt "addressMetadata" #[] (map connectedRouteMetadata)
@@ -69,6 +69,8 @@ def «interface» : Decoder Interface := object do
     incomingFilter := ← opt "incomingFilter" str
     outgoingFilter := ← opt "outgoingFilter" str
     proxyArp := ← dflt "proxyArp" false bool
-    ospf := ← opt "ospfSettings" ospfInterfaceSettings }
+    ospf := ← opt "ospfSettings" ospfInterfaceSettings
+    cryptoMap := ← opt "cryptoMap" str
+    tunnelConfig := ← opt "tunnelConfig" tunnelConfiguration }
 
 end LeanBatfish.Decode

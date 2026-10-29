@@ -8,18 +8,22 @@ proved in Lean.
 
 The semantics follows Batfish's own behavior. To check that it does, the simulator in this
 repository runs a network to its converged data plane and answers the same questions
-Batfish answers: the main routing tables (`routes`), the forwarding tables (`fibs`) and the
-BGP tables (`bgpRib`). The answers are compared with Batfish's for the same network
-(differential testing). On every network inside the modeled subset (connected, static and
-aggregate routes, OSPF, and BGP with route reflection, communities, AS-path policies,
-multipath, add-path and aggregation, on Cisco, Juniper and Arista), the answers match.
+Batfish answers: the main routing tables (`routes`), the forwarding tables (`fibs`), the
+BGP tables (`bgpRib`), and the IPsec sessions (`ipsecSessionStatus`, `ipsecEdges`). The
+answers are compared with Batfish's for the same network (differential testing). On every
+network inside the modeled subset (connected, static and aggregate routes, OSPF, BGP with
+route reflection, communities, AS-path policies, multipath, add-path and aggregation, and
+IPsec and GRE tunnels, on Cisco, Juniper and Arista), the answers match.
 
 The library also gives the network a *dynamic* semantics, after Daggitt and Griffin. Each
 router (a VRF of a device) holds routing tables and updates them from its neighbors'
 current tables and its configuration (static routes, OSPF, BGP import and export
-policies, ...). Routers update in any order, on information of any age, and peers outside
-the network may announce anything. The forwarding tables computed from the routers'
-states then change over time. Properties can be stated *at any time* (for every schedule
+policies, ...) and brings its IPsec sessions up when its peers' packets get through.
+Routers update in any order, on information of any age, and peers outside the network may
+announce anything. The data plane computed from the routers' states then changes over time.
+In it, packets change as they travel: a router sending into a tunnel wraps the packet in an
+outer header (GRE, or IPsec with the negotiated cipher), and the far end unwraps it, so one
+can say what a packet looks like on every link. Properties can be stated *at any time* (for every schedule
 and every announcement from outside) or about the converged state. The state Batfish
 converges to is a stable state of these dynamics on every network but one in the modeled
 subset, and synchronous iteration of the dynamics reaches exactly Batfish's answers on
@@ -40,6 +44,22 @@ The "at any time" result follows from a general theorem, proved once: a part of 
 whose originations, adjacencies and incoming policies pass a computable check only ever
 holds routes for a given set of prefixes. The incoming policies are checked by an analysis
 of routing policies that is proved sound against the policy interpreter.
+
+`networks/ipsec-vpn/Properties.lean` proves about two sites joined by an IPsec tunnel
+across a provider they do not trust:
+
+* at any time, for any schedule and announcements, a packet from a router of site A to a
+  router of site C is encrypted (from A's gateway to C's gateway) whenever it is in the
+  provider's network, and never leaves the network in the clear; nothing is assumed of the
+  provider's routers;
+* only A's gateway wraps the packet and only C's gateway unwraps it;
+* at convergence the tunnel is up and the packets arrive; and without the gateway's route
+  into the tunnel they would reach the provider in the clear.
+
+This too follows from a general theorem: routers that route statically go through a few
+routing tables, so every way they may forward at any time can be enumerated, while the
+other routers are only assumed not to change packets; a property checked on all those ways
+holds at every time.
 
 ## How it is organized
 
@@ -96,6 +116,7 @@ Ask the simulator questions about an exported snapshot:
 
 ```sh
 .lake/build/bin/lean-batfish-sim answer networks/example/export routes fibs bgpRib
+.lake/build/bin/lean-batfish-sim answer networks/ipsec-vpn/export ipsecSessionStatus ipsecEdges
 ```
 
 Compare the simulator's answers with Batfish's on every exported snapshot:

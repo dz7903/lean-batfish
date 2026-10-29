@@ -36,19 +36,19 @@ theorem converged_forever (ψ : Theory.Schedule network.size) (t : Nat) :
 
 /-- `host1` reaches `host2`, through `as2dept1`. -/
 theorem host1_reaches_host2 :
-    network.Delivers converged (.ofOctets 2 128 1 101) "host1" "host2" :=
+    network.Delivers converged (.ip (.ofOctets 2 128 0 101) (.ofOctets 2 128 1 101)) "host1" "host2" :=
   Network.delivers_of_check (by native_decide)
 
 /-- `as3core1`, in AS3, reaches `host1`: its traffic crosses AS3 and AS2. -/
 theorem as3core1_reaches_host1 :
-    network.Delivers converged (.ofOctets 2 128 0 101) "as3core1" "host1" :=
+    network.Delivers converged (.ip (.ofOctets 3 10 1 1) (.ofOctets 2 128 0 101)) "as3core1" "host1" :=
   Network.delivers_of_check (by native_decide)
 
 /-- But `host1` does not reach `as3core1`'s loopback (3.10.1.1): AS3 announces only some of its
 prefixes to its neighbors (its export policies `as3_to_as1` and `as3_to_as2`), not its
 loopbacks, so no router outside AS3 has a route to it, and `as2dept1` drops the packets. -/
 theorem host1_isolated_from_as3core1 :
-    network.Isolated converged (.ofOctets 3 10 1 1) "host1" "as3core1" :=
+    network.Isolated converged (.ip (.ofOctets 2 128 0 101) (.ofOctets 3 10 1 1)) "host1" "as3core1" :=
   Network.isolated_of_check (by native_decide)
 
 /-! ## At any time: what announcements from outside can do to AS2
@@ -136,7 +136,7 @@ def hijacked : Fin withoutAS1.size → RouterState :=
 AS1. -/
 theorem hijack_diverts :
     (∃ t, hijacked = withoutAS1.system.iterate hijackInput withoutAS1.init t) ∧
-    withoutAS1.Exits hijacked host2Ip "as2border1" :=
+    withoutAS1.Exits hijacked (.ip (.ofOctets 2 128 0 101) host2Ip) "as2border1" :=
   ⟨withoutAS1.converge_eq_iterate hijackInput 1000, Network.exits_of_check (by native_decide)⟩
 
 end Networks.Example

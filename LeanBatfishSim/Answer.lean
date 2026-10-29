@@ -96,8 +96,69 @@ def answerBgpRib (dp : DataPlane) : Json :=
         ("Tunnel_Encapsulation_Attribute", Json.null), ("Weight", a.weight),
         ("Tag", renderTag r.tag)])
 
+/-! ## IPsec
+
+Batfish answers these from the configurations alone (`Ipsec.topology`). -/
+
+def renderInterface (host iface : String) : Json :=
+  Json.mkObj [("hostname", host), ("interface", iface)]
+
+def ipsecStatus (s : Ipsec.Session) : String :=
+  if s.ikeProposal.isNone then "IKE_PHASE1_FAILED"
+  else if !s.keyMatches then "IKE_PHASE1_KEY_MISMATCH"
+  else if s.ipsecProposal.isNone then "IPSEC_PHASE2_FAILED"
+  else "IPSEC_SESSION_ESTABLISHED"
+
+/-- `ipsecSessionStatus`: for each static peer configuration, its session with each peer it
+initiates to, or `MISSING_END_POINT` if no peer configuration pairs with it at all. -/
+def answerIpsecSessionStatus (configs : Array Configuration) : Json :=
+  let edges := Ipsec.topology configs
+  let configOf (id : Ipsec.PeerId) : Option IpsecPeerConfig :=
+    (configs.find? (·.hostname == id.host)).bind (·.ipsecPeerConfigs.find? id.name)
+  let tunnels (mine theirs : Option String) : Json :=
+    if mine.isNone && theirs.isNone then "Not Applicable"
+    else s!"{mine.getD "Missing Initiator"} -> {theirs.getD "Missing Responder"}"
+  table #["Node", "Node_Interface", "Node_IP", "Remote_Node", "Remote_Node_Interface",
+      "Remote_Node_IP", "Tunnel_Interfaces", "Status"]
+    (Ipsec.peers configs |>.flatMap fun (id, _, p) =>
+      if let .dynamic _ := p.kind then #[] else
+      let row (remote : Option (String × IpsecPeerConfig)) (status : String) : Json :=
+        Json.mkObj [
+          ("Node", renderNode id.host),
+          ("Node_Interface", renderInterface id.host p.sourceInterface),
+          ("Node_IP", toString p.localAddress),
+          ("Remote_Node", (remote.map (renderNode ·.1)).getD .null),
+          ("Remote_Node_Interface", (remote.map fun (h, r) => renderInterface h r.sourceInterface).getD .null),
+          ("Remote_Node_IP", (remote.map fun (_, r) => toJson (toString r.localAddress)).getD .null),
+          ("Tunnel_Interfaces", tunnels p.tunnelInterface (remote.bind (·.2.tunnelInterface))),
+          ("Status", status)]
+      let out := edges.filter (·.initiator == id)
+      if out.isEmpty && !edges.any (·.responder == id) then #[row none "MISSING_END_POINT"]
+      else out.filterMap fun e =>
+        (configOf e.responder).map fun r => row (some (e.responder.host, r)) (ipsecStatus e.session))
+
+/-- `ipsecEdges`: the established sessions, one row per direction. -/
+def answerIpsecEdges (configs : Array Configuration) : Json :=
+  let configOf (id : Ipsec.PeerId) : Option IpsecPeerConfig :=
+    (configs.find? (·.hostname == id.host)).bind (·.ipsecPeerConfigs.find? id.name)
+  let tunnel (host : String) (p : IpsecPeerConfig) : Json :=
+    (p.tunnelInterface.map (renderInterface host)).getD .null
+  table #["Source_Interface", "Tunnel_Interface", "Remote_Source_Interface",
+      "Remote_Tunnel_Interface"]
+    (Ipsec.topology configs |>.filterMap fun e => do
+      guard e.session.ipsecProposal.isSome
+      let (i, r) := (← configOf e.initiator, ← configOf e.responder)
+      return Json.mkObj [
+        ("Source_Interface", renderInterface e.initiator.host i.sourceInterface),
+        ("Tunnel_Interface", tunnel e.initiator.host i),
+        ("Remote_Source_Interface", renderInterface e.responder.host r.sourceInterface),
+        ("Remote_Tunnel_Interface", tunnel e.responder.host r)])
+
 /-- The questions the simulator answers, by Batfish's name. -/
-def questions : List (String × (DataPlane → Json)) :=
-  [("routes", answerRoutes), ("fibs", answerFibs), ("bgpRib", answerBgpRib)]
+def questions : List (String × (Array Configuration → DataPlane → Json)) :=
+  [("routes", fun _ => answerRoutes), ("fibs", fun _ => answerFibs),
+   ("bgpRib", fun _ => answerBgpRib),
+   ("ipsecSessionStatus", fun c _ => answerIpsecSessionStatus c),
+   ("ipsecEdges", fun c _ => answerIpsecEdges c)]
 
 end LeanBatfishSim

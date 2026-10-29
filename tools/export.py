@@ -43,6 +43,8 @@ QUESTIONS = {
     "routes": lambda q: q.routes(),
     "bgpRib": lambda q: q.bgpRib(),
     "fibs": lambda q: q.fibs(),
+    "ipsecSessionStatus": lambda q: q.ipsecSessionStatus(),
+    "ipsecEdges": lambda q: q.ipsecEdges(),
 }
 
 

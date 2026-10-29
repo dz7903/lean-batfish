@@ -1,0 +1,333 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Interface from which the edge originates",
+      "isKey": true,
+      "isValue": false,
+      "name": "Interface",
+      "schema": "Interface"
+     },
+     {
+      "description": "IPs",
+      "isKey": false,
+      "isValue": true,
+      "name": "IPs",
+      "schema": "Set<Ip>"
+     },
+     {
+      "description": "Interface at which the edge terminates",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_Interface",
+      "schema": "Interface"
+     },
+     {
+      "description": "Remote IPs",
+      "isKey": false,
+      "isValue": true,
+      "name": "Remote_IPs",
+      "schema": "Set<Ip>"
+     }
+    ],
+    "textDesc": "Display Edges"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Interface": {
+      "hostname": "a1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "10.1.0.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Remote_IPs": [
+      "10.1.0.1"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "a1",
+      "interface": "GigabitEthernet0/1"
+     },
+     "IPs": [
+      "10.1.0.5"
+     ],
+     "Remote_Interface": {
+      "hostname": "a2",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "10.1.0.6"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "a2",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "10.1.0.6"
+     ],
+     "Remote_Interface": {
+      "hostname": "a1",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Remote_IPs": [
+      "10.1.0.5"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "b1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "203.0.113.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "203.0.113.1"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "b1",
+      "interface": "GigabitEthernet0/1"
+     },
+     "IPs": [
+      "198.18.0.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "b2",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Remote_IPs": [
+      "198.18.0.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "b2",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "198.51.100.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "198.51.100.1"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "b2",
+      "interface": "GigabitEthernet0/1"
+     },
+     "IPs": [
+      "198.18.0.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "b1",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Remote_IPs": [
+      "198.18.0.1"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "c1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "10.3.0.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Remote_IPs": [
+      "10.3.0.1"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "203.0.113.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "b1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "203.0.113.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/1"
+     },
+     "IPs": [
+      "10.1.0.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "a1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "10.1.0.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwa",
+      "interface": "Tunnel0"
+     },
+     "IPs": [
+      "172.16.0.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwc",
+      "interface": "Tunnel0"
+     },
+     "Remote_IPs": [
+      "172.16.0.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/0"
+     },
+     "IPs": [
+      "198.51.100.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "b2",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "198.51.100.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/1"
+     },
+     "IPs": [
+      "10.3.0.1"
+     ],
+     "Remote_Interface": {
+      "hostname": "c1",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_IPs": [
+      "10.3.0.2"
+     ]
+    },
+    {
+     "Interface": {
+      "hostname": "gwc",
+      "interface": "Tunnel0"
+     },
+     "IPs": [
+      "172.16.0.2"
+     ],
+     "Remote_Interface": {
+      "hostname": "gwa",
+      "interface": "Tunnel0"
+     },
+     "Remote_IPs": [
+      "172.16.0.1"
+     ]
+    }
+   ],
+   "summary": {
+    "notes": "Found 14 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 14
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.edges.EdgesQuestion",
+  "edgeType": "LAYER3",
+  "initial": false,
+  "nodes": ".*",
+  "remoteNodes": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns Layer 3 links.",
+   "instanceName": "__layer3Edges",
+   "longDescription": "Lists all Layer 3 edges in the network.",
+   "orderedVariableNames": [
+    "nodes",
+    "remoteNodes"
+   ],
+   "tags": [
+    "topology"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Include edges whose first node matches this name or regex.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    },
+    "remoteNodes": {
+     "allowedValues": [],
+     "description": "Include edges whose second node matches this name or regex.",
+     "displayName": "Remote Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 14 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 14
+ }
+}

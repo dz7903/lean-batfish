@@ -21,7 +21,7 @@ from scan import side_inputs
 
 SIM = ROOT / ".lake" / "build" / "bin" / "lean-batfish-sim"
 
-QUESTIONS = ["routes", "fibs", "bgpRib"]
+QUESTIONS = ["routes", "fibs", "bgpRib", "ipsecSessionStatus", "ipsecEdges"]
 
 
 def rows(answer: dict) -> Counter:

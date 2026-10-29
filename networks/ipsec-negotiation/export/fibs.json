@@ -1,0 +1,1384 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "Node of the FIB",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "VRF of the FIB",
+      "isKey": true,
+      "isValue": false,
+      "name": "VRF",
+      "schema": "String"
+     },
+     {
+      "description": "Network of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Network",
+      "schema": "Prefix"
+     },
+     {
+      "description": "Protocol of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Protocol",
+      "schema": "String"
+     },
+     {
+      "description": "Next hop of the top-level route",
+      "isKey": true,
+      "isValue": false,
+      "name": "Next_Hop",
+      "schema": "NextHop"
+     },
+     {
+      "description": "forward, discard, or next_vrf",
+      "isKey": true,
+      "isValue": false,
+      "name": "Action",
+      "schema": "String"
+     },
+     {
+      "description": "Outgoing interface, for forward",
+      "isKey": true,
+      "isValue": false,
+      "name": "Interface",
+      "schema": "String"
+     },
+     {
+      "description": "IP to ARP for, for forward",
+      "isKey": true,
+      "isValue": false,
+      "name": "Arp_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "VRF to look up in, for next_vrf",
+      "isKey": true,
+      "isValue": false,
+      "name": "Next_VRF",
+      "schema": "String"
+     }
+    ],
+    "textDesc": "${Node} | ${VRF} | ${Network} | ${Protocol} | ${Next_Hop} | ${Action} | ${Interface} | ${Arp_IP} | ${Next_VRF}"
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.1.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel1"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel1",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.2.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel2"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel2",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.3.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel3"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel3",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.4.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel4"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel4",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.5.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "172.20.5.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/5",
+     "Arp_IP": "172.20.5.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.6.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel6"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel6",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.7.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "172.20.7.2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/7",
+     "Arp_IP": "172.20.7.2",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.0.9.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel9"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel9",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.1.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel1"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel1",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.1.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel1"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel1",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.2.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel2"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel2",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.2.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel2"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel2",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.3.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel3"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel3",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.3.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel3"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel3",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.4.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel4"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel4",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.4.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel4"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel4",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.6.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel6"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel6",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.6.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel6"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel6",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.9.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel9"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel9",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "10.255.9.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel9"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel9",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.1.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/1",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.1.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/1",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.2.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/2",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.2.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/2"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/2",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.3.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/3",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.3.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/3"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/3",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.4.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/4",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.4.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/4"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/4",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.5.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/5"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/5",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.5.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/5"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/5",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.6.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/6"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/6",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.6.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/6"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/6",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.7.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/7"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/7",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-hub",
+      "name": "hub"
+     },
+     "VRF": "default",
+     "Network": "172.20.7.1/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/7"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/7",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "10.0.1.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "10.255.1.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "10.255.1.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "172.20.1.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke1",
+      "name": "spoke1"
+     },
+     "VRF": "default",
+     "Network": "172.20.1.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "10.0.2.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "10.255.2.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "10.255.2.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "172.20.2.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke2",
+      "name": "spoke2"
+     },
+     "VRF": "default",
+     "Network": "172.20.2.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "10.0.3.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "10.255.3.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "10.255.3.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "172.20.3.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke3",
+      "name": "spoke3"
+     },
+     "VRF": "default",
+     "Network": "172.20.3.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "10.0.4.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "10.255.4.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "10.255.4.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Tunnel0"
+     },
+     "Action": "forward",
+     "Interface": "Tunnel0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "172.20.4.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke4",
+      "name": "spoke4"
+     },
+     "VRF": "default",
+     "Network": "172.20.4.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke5",
+      "name": "spoke5"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "172.20.5.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "172.20.5.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke5",
+      "name": "spoke5"
+     },
+     "VRF": "default",
+     "Network": "10.0.5.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke5",
+      "name": "spoke5"
+     },
+     "VRF": "default",
+     "Network": "172.20.5.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke5",
+      "name": "spoke5"
+     },
+     "VRF": "default",
+     "Network": "172.20.5.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "st0.0"
+     },
+     "Action": "forward",
+     "Interface": "st0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "10.0.6.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "lo0.0"
+     },
+     "Action": "forward",
+     "Interface": "lo0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "10.255.6.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "st0.0"
+     },
+     "Action": "forward",
+     "Interface": "st0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "10.255.6.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "st0.0"
+     },
+     "Action": "forward",
+     "Interface": "st0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "172.20.6.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "ge-0/0/0.0"
+     },
+     "Action": "forward",
+     "Interface": "ge-0/0/0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke6",
+      "name": "spoke6"
+     },
+     "VRF": "default",
+     "Network": "172.20.6.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "ge-0/0/0.0"
+     },
+     "Action": "forward",
+     "Interface": "ge-0/0/0.0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke7",
+      "name": "spoke7"
+     },
+     "VRF": "default",
+     "Network": "10.0.0.1/32",
+     "Protocol": "static",
+     "Next_Hop": {
+      "type": "ip",
+      "ip": "172.20.7.1"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": "172.20.7.1",
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke7",
+      "name": "spoke7"
+     },
+     "VRF": "default",
+     "Network": "10.0.7.1/32",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "Loopback0"
+     },
+     "Action": "forward",
+     "Interface": "Loopback0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke7",
+      "name": "spoke7"
+     },
+     "VRF": "default",
+     "Network": "172.20.7.0/30",
+     "Protocol": "connected",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    },
+    {
+     "Node": {
+      "id": "node-spoke7",
+      "name": "spoke7"
+     },
+     "VRF": "default",
+     "Network": "172.20.7.2/32",
+     "Protocol": "local",
+     "Next_Hop": {
+      "type": "interface",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Action": "forward",
+     "Interface": "GigabitEthernet0/0",
+     "Arp_IP": null,
+     "Next_VRF": null
+    }
+   ],
+   "summary": {
+    "notes": "Found 73 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 73
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.fibs.FibsQuestion",
+  "nodes": ".*",
+  "vrfs": ".*",
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns the forwarding table (FIB) entries of the converged data plane.",
+   "instanceName": "__fibs",
+   "longDescription": "Lists, for each node and VRF, every FIB entry: the main-RIB route it comes from and the forwarding action (forward out an interface to an ARP IP, discard, or look up in another VRF).",
+   "orderedVariableNames": [
+    "nodes",
+    "vrfs"
+   ],
+   "tags": [
+    "dataplane",
+    "routing"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Examine FIBs on nodes matching this specifier.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "nodeSpec",
+     "value": ".*",
+     "values": []
+    },
+    "vrfs": {
+     "allowedValues": [],
+     "description": "Examine FIBs of VRFs matching this name or regex.",
+     "displayName": "VRFs",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": false,
+     "type": "vrf",
+     "value": ".*",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 73 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 73
+ }
+}

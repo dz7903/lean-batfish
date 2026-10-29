@@ -1,0 +1,192 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.datamodel.table.TableAnswerElement",
+   "metadata": {
+    "columnMetadata": [
+     {
+      "description": "IPSec initiator",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node",
+      "schema": "Node"
+     },
+     {
+      "description": "Initiator Interface",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node_Interface",
+      "schema": "Interface"
+     },
+     {
+      "description": "Initiator IP",
+      "isKey": true,
+      "isValue": false,
+      "name": "Node_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "IPSec responder",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_Node",
+      "schema": "Node"
+     },
+     {
+      "description": "Responder Interface",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_Node_Interface",
+      "schema": "Interface"
+     },
+     {
+      "description": "Responder IP",
+      "isKey": true,
+      "isValue": false,
+      "name": "Remote_Node_IP",
+      "schema": "Ip"
+     },
+     {
+      "description": "Tunnel interfaces pair used in peering session",
+      "isKey": true,
+      "isValue": false,
+      "name": "Tunnel_Interfaces",
+      "schema": "String"
+     },
+     {
+      "description": "IPSec session status",
+      "isKey": false,
+      "isValue": true,
+      "name": "Status",
+      "schema": "String"
+     }
+    ],
+    "textDesc": " IPSec peering session between initiator ${Node} with interface {Node_Interface} and IP ${Node_IP} and responder ${Remote_Node} with interface {Remote_Node_Interface} and IP ${Remote_Node_IP}s has status ${Status}."
+   },
+   "excludedRows": [],
+   "rows": [
+    {
+     "Node": {
+      "id": "node-gwa",
+      "name": "gwa"
+     },
+     "Node_Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Node_IP": "203.0.113.1",
+     "Remote_Node": {
+      "id": "node-gwc",
+      "name": "gwc"
+     },
+     "Remote_Node_Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_Node_IP": "198.51.100.1",
+     "Tunnel_Interfaces": "Tunnel0 -> Tunnel0",
+     "Status": "IPSEC_SESSION_ESTABLISHED"
+    },
+    {
+     "Node": {
+      "id": "node-gwc",
+      "name": "gwc"
+     },
+     "Node_Interface": {
+      "hostname": "gwc",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Node_IP": "198.51.100.1",
+     "Remote_Node": {
+      "id": "node-gwa",
+      "name": "gwa"
+     },
+     "Remote_Node_Interface": {
+      "hostname": "gwa",
+      "interface": "GigabitEthernet0/0"
+     },
+     "Remote_Node_IP": "203.0.113.1",
+     "Tunnel_Interfaces": "Tunnel0 -> Tunnel0",
+     "Status": "IPSEC_SESSION_ESTABLISHED"
+    }
+   ],
+   "summary": {
+    "notes": "Found 2 results",
+    "numFailed": 0,
+    "numPassed": 0,
+    "numResults": 2
+   },
+   "warnings": []
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.ipsecsessionstatus.IpsecSessionStatusQuestion",
+  "nodes": null,
+  "remoteNodes": null,
+  "status": null,
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Returns the status of configured IPSec sessions.",
+   "instanceName": "__ipsecSessionStatus",
+   "longDescription": "Shows configuration settings and status for each configured IPSec tunnel in the network. The status is IPSEC_SESSION_ESTABLISHED for tunnels that are expected to be established; it is IKE_PHASE1_FAILED if IKE parameters negotiation failed; it is IKE_PHASE1_KEY_MISMATCH if IKE negotiation was successful but IKE keys do not match; it is IPSEC_PHASE2_FAILED if negotiation of IPsec parameters failed; and it is MISSING_END_POINT if the remote endpoint for a configured IPsec tunnel could not be found in the network.",
+   "orderedVariableNames": [
+    "nodes",
+    "remoteNodes",
+    "status"
+   ],
+   "tags": [
+    "ipsec",
+    "status"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Include sessions whose first node matches this specifier.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    },
+    "remoteNodes": {
+     "allowedValues": [],
+     "description": "Include sessions whose second node matches this specifier.",
+     "displayName": "Remote Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    },
+    "status": {
+     "allowedValues": [],
+     "description": "Only include IPSec sessions for which status matches this specifier.",
+     "displayName": "Status",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "ipsecSessionStatusSpec",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "Found 2 results",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 2
+ }
+}

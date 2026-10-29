@@ -69,6 +69,7 @@ deriving instance ToExpr for OspfArea
 deriving instance ToExpr for OspfProcess
 deriving instance ToExpr for InterfaceAddress
 deriving instance ToExpr for ConnectedRouteMetadata
+deriving instance ToExpr for TunnelConfiguration
 deriving instance ToExpr for Interface
 deriving instance ToExpr for AllowRemoteAsOut
 deriving instance ToExpr for AddressFamilyCapabilities
@@ -84,6 +85,13 @@ deriving instance ToExpr for BgpAggregate
 deriving instance ToExpr for BgpProcess
 deriving instance ToExpr for StaticRoute
 deriving instance ToExpr for Vrf
+deriving instance ToExpr for IkePhase1Key
+deriving instance ToExpr for IkePhase1Proposal
+deriving instance ToExpr for IkePhase1Policy
+deriving instance ToExpr for IpsecPhase2Proposal
+deriving instance ToExpr for IpsecPhase2Policy
+deriving instance ToExpr for IpsecPeerKind
+deriving instance ToExpr for IpsecPeerConfig
 deriving instance ToExpr for Configuration
 deriving instance ToExpr for AnnouncementType
 deriving instance ToExpr for Announcement

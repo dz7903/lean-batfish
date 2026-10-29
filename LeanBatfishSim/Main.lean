@@ -16,7 +16,8 @@ def usage : String :=
   "usage: lean-batfish-sim <command> ...\n\n" ++
   "  answer [--dynamics] <snapshot-dir> <question>...\n" ++
   "            simulate the network exported in <snapshot-dir> and print the answers to\n" ++
-  "            the questions (routes, fibs, bgpRib) as one JSON object; with --dynamics,\n" ++
+  "            the questions (routes, fibs, bgpRib, ipsecSessionStatus, ipsecEdges) as one\n" ++
+  "            JSON object; with --dynamics,\n" ++
   "            run the declarative dynamics (LeanBatfish.Model) to a fixed point instead\n" ++
   "  check-stable <snapshot-dir>\n" ++
   "            check that the simulator's converged state is a stable state of the\n" ++
@@ -70,7 +71,7 @@ def answer (dir : System.FilePath) (qs : List String) (dynamics : Bool := false)
     match dp with
     | .error e => IO.println (Json.mkObj [("failed", e)]).compress; pure 4
     | .ok dp =>
-      let answers := qs.filterMap fun q => (questions.find? (·.1 == q)).map fun (_, f) => (q, f dp)
+      let answers := qs.filterMap fun q => (questions.find? (·.1 == q)).map fun (_, f) => (q, f s.configs dp)
       IO.println (Json.mkObj answers).compress
       pure 0
 

@@ -1,6 +1,7 @@
 import LeanBatfish.IR.Acl
 import LeanBatfish.IR.Bgp
 import LeanBatfish.IR.Interface
+import LeanBatfish.IR.Ipsec
 import LeanBatfish.IR.NextHop
 import LeanBatfish.IR.RoutingPolicy.Statement
 
@@ -68,6 +69,12 @@ structure Configuration where
   asPathAccessLists : NameMap AsPathAccessList
   asPathExprs : NameMap AsPathExpr
   asPathMatchExprs : NameMap AsPathMatchExpr
+  ikePhase1Keys : NameMap IkePhase1Key := #[]
+  ikePhase1Policies : NameMap IkePhase1Policy := #[]
+  ikePhase1Proposals : NameMap IkePhase1Proposal := #[]
+  ipsecPeerConfigs : NameMap IpsecPeerConfig := #[]
+  ipsecPhase2Policies : NameMap IpsecPhase2Policy := #[]
+  ipsecPhase2Proposals : NameMap IpsecPhase2Proposal := #[]
   deriving Inhabited
 
 namespace Configuration

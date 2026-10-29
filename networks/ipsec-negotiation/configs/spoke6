@@ -1,0 +1,28 @@
+#
+set system host-name spoke6
+#
+set interfaces ge-0/0/0 unit 0 family inet address 172.20.6.2/30
+set interfaces lo0 unit 0 family inet address 10.0.6.1/32
+set interfaces st0 unit 0 family inet address 10.255.6.2/30
+#
+set security ike proposal IKE-P1 authentication-method pre-shared-keys
+set security ike proposal IKE-P1 dh-group group14
+set security ike proposal IKE-P1 authentication-algorithm sha1
+set security ike proposal IKE-P1 encryption-algorithm aes-256-cbc
+set security ike policy IKE-HUB mode main
+set security ike policy IKE-HUB proposals IKE-P1
+set security ike policy IKE-HUB pre-shared-key ascii-text "key-spoke6"
+set security ike gateway HUB external-interface ge-0/0/0.0
+set security ike gateway HUB ike-policy IKE-HUB
+set security ike gateway HUB address 172.20.6.1
+#
+set security ipsec proposal IPSEC-P2 protocol esp
+set security ipsec proposal IPSEC-P2 authentication-algorithm hmac-sha-256-128
+set security ipsec proposal IPSEC-P2 encryption-algorithm aes-256-cbc
+set security ipsec policy IPSEC-HUB proposals IPSEC-P2
+set security ipsec policy IPSEC-HUB perfect-forward-secrecy keys group14
+set security ipsec vpn VPN-HUB ike gateway HUB
+set security ipsec vpn VPN-HUB ike ipsec-policy IPSEC-HUB
+set security ipsec vpn VPN-HUB bind-interface st0.0
+#
+set routing-options static route 10.0.0.1/32 next-hop st0.0

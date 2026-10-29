@@ -1,0 +1,2550 @@
+{
+ "answerElements": [
+  {
+   "class": "org.batfish.question.VIModelQuestionPlugin$VIModelAnswerElement",
+   "nodes": {
+    "a1": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "a1",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "SWITCH",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "a1",
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.0.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to gwa",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.0.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "GigabitEthernet0/1": {
+       "name": "GigabitEthernet0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.0.5/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/1"
+       ],
+       "description": "to a2",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.0.5/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "Loopback0": {
+       "name": "Loopback0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.1.1/32"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 8000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "Loopback0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.1.1/32",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOOPBACK",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "a1",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "0.0.0.0/0",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.1.0.1",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "10.1.2.0/24",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.1.0.6",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "a2": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "a2",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "SWITCH",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "a2",
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.0.6/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to a1",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.0.6/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "Loopback0": {
+       "name": "Loopback0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.2.1/32"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 8000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "Loopback0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.2.1/32",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOOPBACK",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "a2",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "0.0.0.0/0",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.1.0.5",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "b1": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "b1",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "b1",
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "203.0.113.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to site A's gateway (gwa)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": {
+        "area": 0,
+        "cost": 1,
+        "deadInterval": 40,
+        "enabled": true,
+        "helloInterval": 10,
+        "helloMultiplier": 0,
+        "inboundDistributeListPolicy": null,
+        "nbmaNeighbors": [],
+        "networkType": "BROADCAST",
+        "ospfAddresses": null,
+        "passive": false,
+        "process": "1",
+        "type5FilterPolicy": null
+       },
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "203.0.113.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "GigabitEthernet0/1": {
+       "name": "GigabitEthernet0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "198.18.0.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/1"
+       ],
+       "description": "to b2",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": {
+        "area": 0,
+        "cost": 1,
+        "deadInterval": 40,
+        "enabled": true,
+        "helloInterval": 10,
+        "helloMultiplier": 0,
+        "inboundDistributeListPolicy": null,
+        "nbmaNeighbors": [],
+        "networkType": "BROADCAST",
+        "ospfAddresses": null,
+        "passive": false,
+        "process": "1",
+        "type5FilterPolicy": null
+       },
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "198.18.0.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~OSPF_EXPORT_POLICY:default:1~": {
+       "name": "~OSPF_EXPORT_POLICY:default:1~",
+       "statements": []
+      },
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "b1",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {
+        "1": {
+         "adminCosts": {
+          "ospf": 110,
+          "ospfE1": 110,
+          "ospfE2": 110,
+          "ospfIA": 110,
+          "ospfIS": 110
+         },
+         "areas": {
+          "0": {
+           "injectDefaultRoute": true,
+           "interfaces": [
+            "GigabitEthernet0/0",
+            "GigabitEthernet0/1"
+           ],
+           "metricOfDefaultRoute": 0,
+           "name": 0,
+           "nssa": null,
+           "stub": null,
+           "stubType": "NONE",
+           "summaries": {},
+           "summaryFilter": null
+          }
+         },
+         "exportPolicy": "~OSPF_EXPORT_POLICY:default:1~",
+         "exportPolicySources": [],
+         "generatedRoutes": [],
+         "maxMetricExternalNetworks": null,
+         "maxMetricStubNetworks": null,
+         "maxMetricSummaryNetworks": null,
+         "maxMetricTransitLinks": null,
+         "processId": "1",
+         "referenceBandwidth": 100000000.0,
+         "rfc1583Compatible": null,
+         "routerId": "203.0.113.2",
+         "summaryAdminCost": 254,
+         "summaryDiscardMetric": 0
+        }
+       },
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "b2": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "b2",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "ROUTER",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "b2",
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "198.51.100.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to site C's gateway (gwc)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": {
+        "area": 0,
+        "cost": 1,
+        "deadInterval": 40,
+        "enabled": true,
+        "helloInterval": 10,
+        "helloMultiplier": 0,
+        "inboundDistributeListPolicy": null,
+        "nbmaNeighbors": [],
+        "networkType": "BROADCAST",
+        "ospfAddresses": null,
+        "passive": false,
+        "process": "1",
+        "type5FilterPolicy": null
+       },
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "198.51.100.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "GigabitEthernet0/1": {
+       "name": "GigabitEthernet0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "198.18.0.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/1"
+       ],
+       "description": "to b1",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": {
+        "area": 0,
+        "cost": 1,
+        "deadInterval": 40,
+        "enabled": true,
+        "helloInterval": 10,
+        "helloMultiplier": 0,
+        "inboundDistributeListPolicy": null,
+        "nbmaNeighbors": [],
+        "networkType": "BROADCAST",
+        "ospfAddresses": null,
+        "passive": false,
+        "process": "1",
+        "type5FilterPolicy": null
+       },
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "198.18.0.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~OSPF_EXPORT_POLICY:default:1~": {
+       "name": "~OSPF_EXPORT_POLICY:default:1~",
+       "statements": []
+      },
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "b2",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {
+        "1": {
+         "adminCosts": {
+          "ospf": 110,
+          "ospfE1": 110,
+          "ospfE2": 110,
+          "ospfIA": 110,
+          "ospfIS": 110
+         },
+         "areas": {
+          "0": {
+           "injectDefaultRoute": true,
+           "interfaces": [
+            "GigabitEthernet0/0",
+            "GigabitEthernet0/1"
+           ],
+           "metricOfDefaultRoute": 0,
+           "name": 0,
+           "nssa": null,
+           "stub": null,
+           "stubType": "NONE",
+           "summaries": {},
+           "summaryFilter": null
+          }
+         },
+         "exportPolicy": "~OSPF_EXPORT_POLICY:default:1~",
+         "exportPolicySources": [],
+         "generatedRoutes": [],
+         "maxMetricExternalNetworks": null,
+         "maxMetricStubNetworks": null,
+         "maxMetricSummaryNetworks": null,
+         "maxMetricTransitLinks": null,
+         "processId": "1",
+         "referenceBandwidth": 100000000.0,
+         "rfc1583Compatible": null,
+         "routerId": "198.51.100.2",
+         "summaryAdminCost": 254,
+         "summaryDiscardMetric": 0
+        }
+       },
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "c1": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "c1",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "SWITCH",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "c1",
+     "ikePhase1Keys": {},
+     "ikePhase1Policies": {},
+     "ikePhase1Proposals": {},
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.3.0.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to gwc",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.3.0.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "Loopback0": {
+       "name": "Loopback0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.3.1.1/32"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 8000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "Loopback0"
+       ],
+       "description": null,
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.3.1.1/32",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "LOOPBACK",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {},
+     "ipsecPhase2Policies": {},
+     "ipsecPhase2Proposals": {},
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "c1",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "0.0.0.0/0",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.3.0.1",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "gwa": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "gwa",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "SWITCH",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "gwa",
+     "ikePhase1Keys": {
+      "KEYRING-C": {
+       "keyHash": "c4429e2da8ea43763e028885366bcbf6061943743816d33ad1ad07dee3899379",
+       "keyType": "PRE_SHARED_KEY_UNENCRYPTED",
+       "localInterface": "GigabitEthernet0/0",
+       "remoteIdentity": {
+        "class": "org.batfish.datamodel.IpWildcardIpSpace",
+        "ipWildcard": "198.51.100.1"
+       }
+      }
+     },
+     "ikePhase1Policies": {
+      "TO-C": {
+       "name": "TO-C",
+       "ikePhase1Key": {
+        "keyHash": "c4429e2da8ea43763e028885366bcbf6061943743816d33ad1ad07dee3899379",
+        "keyType": "PRE_SHARED_KEY_UNENCRYPTED",
+        "localInterface": "GigabitEthernet0/0",
+        "remoteIdentity": {
+         "class": "org.batfish.datamodel.IpWildcardIpSpace",
+         "ipWildcard": "198.51.100.1"
+        }
+       },
+       "ikePhase1Proposals": [
+        "10"
+       ],
+       "localInterface": "GigabitEthernet0/0",
+       "remoteIdentity": {
+        "class": "org.batfish.datamodel.IpWildcardIpSpace",
+        "ipWildcard": "198.51.100.1"
+       },
+       "selfIdentity": null
+      }
+     },
+     "ikePhase1Proposals": {
+      "10": {
+       "name": "10",
+       "authenticationMethod": "PRE_SHARED_KEYS",
+       "diffieHellmanGroup": "GROUP14",
+       "encryptionAlgorithm": "AES_256_CBC",
+       "hashingAlgorithm": "SHA1",
+       "lifetimeSeconds": 28800
+      }
+     },
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "203.0.113.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to provider B (b1)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "203.0.113.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "GigabitEthernet0/1": {
+       "name": "GigabitEthernet0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.1.0.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/1"
+       ],
+       "description": "to site A (a1)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.1.0.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "Tunnel0": {
+       "name": "Tunnel0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "172.16.0.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 100000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "Tunnel0"
+       ],
+       "description": "IPsec tunnel to site C",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "172.16.0.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "TUNNEL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {
+      "Tunnel0": {
+       "class": "org.batfish.datamodel.IpsecStaticPeerConfig",
+       "destinationAddress": "198.51.100.1",
+       "ikePhase1Policy": "TO-C",
+       "ipsecPolicy": "SITE-VPN",
+       "localAddress": "203.0.113.1",
+       "policyAccessList": null,
+       "sourceInterface": "GigabitEthernet0/0",
+       "tunnelInterface": "Tunnel0"
+      }
+     },
+     "ipsecPhase2Policies": {
+      "SITE-VPN": {
+       "pfsKeyGroup": [
+        "GROUP14"
+       ],
+       "proposals": [
+        "AES256-SHA256"
+       ]
+      }
+     },
+     "ipsecPhase2Proposals": {
+      "AES256-SHA256": {
+       "authenticationAlgorithm": "HMAC_SHA_256_128",
+       "encryptionAlgorithm": "AES_256_CBC",
+       "ipsecEncapsulationMode": "TUNNEL",
+       "protocols": [
+        "ESP"
+       ]
+      }
+     },
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "gwa",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "0.0.0.0/0",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "203.0.113.2",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "10.1.0.0/16",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.1.0.2",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 250,
+         "metric": 0,
+         "network": "10.3.0.0/16",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "10.3.0.0/16",
+         "nextHopInterface": "Tunnel0",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    },
+    "gwc": {
+     "configurationFormat": "CISCO_IOS",
+     "exportBgpFromBgpRib": true,
+     "generateBgpAggregatesFromMainRib": false,
+     "name": "gwc",
+     "asPathAccessLists": {},
+     "asPathExprs": {},
+     "asPathMatchExprs": {},
+     "authenticationKeyChains": {},
+     "communityMatchExprs": {},
+     "communitySetExprs": {},
+     "communitySetMatchExprs": {},
+     "communitySets": {},
+     "defaultCrossZoneAction": "PERMIT",
+     "defaultInboundAction": "PERMIT",
+     "deviceModel": "CISCO_UNSPECIFIED",
+     "deviceType": "SWITCH",
+     "disconnectAdminDownInterfaces": true,
+     "dnsServers": [],
+     "dnsSourceInterface": null,
+     "domainName": null,
+     "generatedReferenceBooks": {},
+     "humanName": "gwc",
+     "ikePhase1Keys": {
+      "KEYRING-A": {
+       "keyHash": "c4429e2da8ea43763e028885366bcbf6061943743816d33ad1ad07dee3899379",
+       "keyType": "PRE_SHARED_KEY_UNENCRYPTED",
+       "localInterface": "GigabitEthernet0/0",
+       "remoteIdentity": {
+        "class": "org.batfish.datamodel.IpWildcardIpSpace",
+        "ipWildcard": "203.0.113.1"
+       }
+      }
+     },
+     "ikePhase1Policies": {
+      "TO-A": {
+       "name": "TO-A",
+       "ikePhase1Key": {
+        "keyHash": "c4429e2da8ea43763e028885366bcbf6061943743816d33ad1ad07dee3899379",
+        "keyType": "PRE_SHARED_KEY_UNENCRYPTED",
+        "localInterface": "GigabitEthernet0/0",
+        "remoteIdentity": {
+         "class": "org.batfish.datamodel.IpWildcardIpSpace",
+         "ipWildcard": "203.0.113.1"
+        }
+       },
+       "ikePhase1Proposals": [
+        "10"
+       ],
+       "localInterface": "GigabitEthernet0/0",
+       "remoteIdentity": {
+        "class": "org.batfish.datamodel.IpWildcardIpSpace",
+        "ipWildcard": "203.0.113.1"
+       },
+       "selfIdentity": null
+      }
+     },
+     "ikePhase1Proposals": {
+      "10": {
+       "name": "10",
+       "authenticationMethod": "PRE_SHARED_KEYS",
+       "diffieHellmanGroup": "GROUP14",
+       "encryptionAlgorithm": "AES_256_CBC",
+       "hashingAlgorithm": "SHA1",
+       "lifetimeSeconds": 28800
+      }
+     },
+     "interfaces": {
+      "GigabitEthernet0/0": {
+       "name": "GigabitEthernet0/0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "198.51.100.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/0"
+       ],
+       "description": "to provider B (b2)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "198.51.100.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "GigabitEthernet0/1": {
+       "name": "GigabitEthernet0/1",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "10.3.0.1/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 1000000000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "GigabitEthernet0/1"
+       ],
+       "description": "to site C (c1)",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "10.3.0.1/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": 1000000000.0,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "PHYSICAL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      },
+      "Tunnel0": {
+       "name": "Tunnel0",
+       "accessVlan": null,
+       "active": true,
+       "additionalArpIps": {
+        "class": "org.batfish.datamodel.EmptyIpSpace"
+       },
+       "addressMetadata": {},
+       "adminUp": true,
+       "allPrefixes": [
+        "172.16.0.2/30"
+       ],
+       "allowedVlans": "",
+       "autostate": true,
+       "bandwidth": 100000.0,
+       "blacklisted": false,
+       "channelGroup": null,
+       "channelGroupMembers": [],
+       "cryptoMap": null,
+       "declaredNames": [
+        "Tunnel0"
+       ],
+       "description": "IPsec tunnel to site A",
+       "dhcpRelayAddresses": [],
+       "eigrp": null,
+       "encapsulationVlan": null,
+       "firewallSessionInterfaceInfo": null,
+       "hmm": false,
+       "hsrpGroups": {},
+       "hsrpVersion": null,
+       "humanName": null,
+       "inactiveReason": null,
+       "inboundFilter": null,
+       "incomingFilter": null,
+       "incomingTransformation": null,
+       "isis": null,
+       "lineUp": true,
+       "mlagId": null,
+       "mtu": 1500,
+       "nativeVlan": null,
+       "ospfSettings": null,
+       "outgoingFilter": null,
+       "outgoingOriginalFlowFilter": null,
+       "outgoingTransformation": null,
+       "postTransformationIncomingFilter": null,
+       "preTransformationOutgoingFilter": null,
+       "prefix": "172.16.0.2/30",
+       "proxyArp": true,
+       "ripEnabled": false,
+       "ripPassive": false,
+       "routingPolicy": null,
+       "spanningTreePortfast": false,
+       "speed": null,
+       "switchport": false,
+       "switchportMode": "NONE",
+       "switchportTrunkEncapsulation": "DOT1Q",
+       "tunnelConfig": null,
+       "type": "TUNNEL",
+       "vlan": null,
+       "vrf": "default",
+       "vrrpGroups": {},
+       "zone": null
+      }
+     },
+     "ipAccessLists": {},
+     "ipSpaceMetadata": {},
+     "ipSpaces": {},
+     "ipsecPeerConfigs": {
+      "Tunnel0": {
+       "class": "org.batfish.datamodel.IpsecStaticPeerConfig",
+       "destinationAddress": "203.0.113.1",
+       "ikePhase1Policy": "TO-A",
+       "ipsecPolicy": "SITE-VPN",
+       "localAddress": "198.51.100.1",
+       "policyAccessList": null,
+       "sourceInterface": "GigabitEthernet0/0",
+       "tunnelInterface": "Tunnel0"
+      }
+     },
+     "ipsecPhase2Policies": {
+      "SITE-VPN": {
+       "pfsKeyGroup": [
+        "GROUP14"
+       ],
+       "proposals": [
+        "AES256-SHA256"
+       ]
+      }
+     },
+     "ipsecPhase2Proposals": {
+      "AES256-SHA256": {
+       "authenticationAlgorithm": "HMAC_SHA_256_128",
+       "encryptionAlgorithm": "AES_256_CBC",
+       "ipsecEncapsulationMode": "TUNNEL",
+       "protocols": [
+        "ESP"
+       ]
+      }
+     },
+     "loggingServers": [],
+     "loggingSourceInterface": null,
+     "mainRibEnforceResolvability": false,
+     "mlags": {},
+     "ntpServers": [],
+     "ntpSourceInterface": null,
+     "packetPolicies": {},
+     "routeFilterLists": {},
+     "routingPolicies": {
+      "~RESOLUTION_POLICY~": {
+       "name": "~RESOLUTION_POLICY~",
+       "statements": [
+        {
+         "class": "org.batfish.datamodel.routing_policy.statement.If",
+         "comment": null,
+         "falseStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnTrue",
+           "comment": null
+          }
+         ],
+         "guard": {
+          "class": "org.batfish.datamodel.routing_policy.expr.MatchPrefixSet",
+          "comment": "match default route",
+          "prefix": {
+           "class": "org.batfish.datamodel.routing_policy.expr.DestinationNetwork"
+          },
+          "prefixSet": {
+           "class": "org.batfish.datamodel.routing_policy.expr.ExplicitPrefixSet",
+           "prefixSpace": [
+            "0.0.0.0/0"
+           ]
+          }
+         },
+         "trueStatements": [
+          {
+           "class": "org.batfish.datamodel.routing_policy.statement.Statements$StaticStatement",
+           "type": "ReturnFalse",
+           "comment": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "snmpSourceInterface": null,
+     "snmpTrapServers": [],
+     "tacacsServers": [],
+     "tacacsSourceInterface": null,
+     "trackingGroups": {},
+     "vendorFamily": {
+      "aws": null,
+      "cisco": {
+       "aaa": null,
+       "banners": {},
+       "cable": null,
+       "defaultSwitchportMode": null,
+       "depiClasses": {},
+       "depiTunnels": {},
+       "enableSecret": null,
+       "hostname": "gwc",
+       "l2tpClasses": {},
+       "lines": {},
+       "logging": {
+        "buffered": null,
+        "console": null,
+        "hosts": {},
+        "on": true,
+        "sourceInterface": null,
+        "trap": null
+       },
+       "ntp": null,
+       "proxyArp": null,
+       "services": {},
+       "sntp": null,
+       "sourceRoute": null,
+       "ssh": null,
+       "users": {}
+      },
+      "cisco_nxos": null,
+      "cumulus": null,
+      "juniper": null
+     },
+     "vrfs": {
+      "default": {
+       "name": "default",
+       "ospfProcesses": {},
+       "aggregateRoutes": [],
+       "appliedRibGroups": {},
+       "bgpProcess": null,
+       "description": null,
+       "eigrpProcesses": {},
+       "fibExportPolicy": null,
+       "firewallSessionVrfInfo": null,
+       "isisProcess": null,
+       "kernelRoutes": [],
+       "resolutionPolicy": "~RESOLUTION_POLICY~",
+       "ripProcess": null,
+       "routeDistinguisher": null,
+       "snmpServer": null,
+       "staticRoutes": [
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "0.0.0.0/0",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "198.51.100.2",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 250,
+         "metric": 0,
+         "network": "10.1.0.0/16",
+         "nextHopInterface": "null_interface",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "10.1.0.0/16",
+         "nextHopInterface": "Tunnel0",
+         "nextHopIp": null,
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        },
+        {
+         "class": "org.batfish.datamodel.StaticRoute",
+         "administrativeCost": 1,
+         "metric": 0,
+         "network": "10.3.0.0/16",
+         "nextHopInterface": "dynamic",
+         "nextHopIp": "10.3.0.2",
+         "nextVrf": null,
+         "nonForwarding": false,
+         "recursive": true,
+         "tag": -1,
+         "track": null
+        }
+       ],
+       "vrfLeakConfig": null
+      }
+     },
+     "zones": {}
+    }
+   },
+   "summary": null
+  }
+ ],
+ "question": {
+  "class": "org.batfish.question.VIModelQuestionPlugin$VIModelQuestion",
+  "nodes": null,
+  "assertion": null,
+  "differential": false,
+  "displayHints": null,
+  "exclusions": null,
+  "includeOneTableKeys": true,
+  "instance": {
+   "description": "Lists configuration attributes of nodes and edges in the network.",
+   "instanceName": "__viModel",
+   "longDescription": "Returns a JSON dictionary with all of the configuration parameters and neighbor relations stored in the vendor independent data-model.",
+   "orderedVariableNames": [],
+   "tags": [
+    "configuration"
+   ],
+   "variables": {
+    "nodes": {
+     "allowedValues": [],
+     "description": "Include nodes matching this name or regex.",
+     "displayName": "Nodes",
+     "fields": null,
+     "longDescription": null,
+     "minElements": null,
+     "minLength": null,
+     "optional": true,
+     "type": "nodeSpec",
+     "values": []
+    }
+   }
+  }
+ },
+ "status": "SUCCESS",
+ "summary": {
+  "notes": "",
+  "numFailed": 0,
+  "numPassed": 0,
+  "numResults": 0
+ }
+}

@@ -605,8 +605,9 @@ theorem confined_always (N : Network) (region : Nat → Bool) (known : List NetR
     rcases hcheck with h | h
     · rw [h] at hj; cases hj
     · exact h
-  show Confined known (N.routers[j].update N.routers (N.states Y) x)
-  unfold Router.update
+  -- IPsec sessions do not hold routes: what counts is the routing update.
+  show Confined known (N.routers[j].updateRoutes N.routers (N.states Y) x)
+  unfold Router.updateRoutes
   split
   · rename_i st hst
     refine step_known hst (routerKnown_of_check hcheck) ?_ ?_ ?_

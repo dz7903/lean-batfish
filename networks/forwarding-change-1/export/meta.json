@@ -15,7 +15,9 @@
   "bgpSessionStatus": "SUCCESS",
   "routes": "SUCCESS",
   "bgpRib": "SUCCESS",
-  "fibs": "SUCCESS"
+  "fibs": "SUCCESS",
+  "ipsecSessionStatus": "SUCCESS",
+  "ipsecEdges": "SUCCESS"
  },
  "errors": {}
 }

@@ -42,6 +42,13 @@ structure ConnectedRouteMetadata where
   generateLocalNullRouteIfDown : Option Bool := none
   deriving Inhabited, Repr
 
+/-- The endpoints of a tunnel interface that is not IPsec, such as GRE
+(`TunnelConfiguration`). -/
+structure TunnelConfiguration where
+  sourceAddress : Ip
+  destinationAddress : Ip
+  deriving DecidableEq, Inhabited, Repr
+
 structure Interface where
   name : String
   vrf : String
@@ -57,6 +64,11 @@ structure Interface where
   outgoingFilter : Option String
   proxyArp : Bool
   ospf : Option OspfInterfaceSettings
+  /-- The crypto map applied to packets leaving the interface (policy-based IPsec). -/
+  cryptoMap : Option String := none
+  /-- The endpoints of a non-IPsec tunnel (GRE). IPsec tunnel interfaces have none: their
+  endpoints are in their `IpsecPeerConfig`. -/
+  tunnelConfig : Option TunnelConfiguration := none
   deriving Inhabited, Repr
 
 end LeanBatfish

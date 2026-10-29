@@ -13,9 +13,11 @@ The configuration semantics of a router, as a step of the routing dynamics
 after it updates. A *router* here is one VRF of a device, since each VRF has its own routing
 tables.
 
-A router's state is its routing tables: the main RIB, the four OSPF tables, and the BGP
-RIB. An update recomputes all of them from what its neighbors hold now and from its own
-tables:
+A router's state is its routing tables — the main RIB, the four OSPF tables, and the BGP
+RIB — and the IPsec sessions it has up. This module is the routing update
+(`Router.updateRoutes`); the sessions are updated in `LeanBatfish.Model.Forwarding`, which
+defines the full `Router.update`. The routing update recomputes all tables from what the
+neighbors hold now and from the router's own tables:
 
 * **OSPF.** The router originates intra-area routes for its interfaces and external routes
   it redistributes from its main RIB; it receives what each adjacent process holds, sent
@@ -40,7 +42,7 @@ current states, as the dynamics require.
 
 namespace LeanBatfish.Model
 
-/-- What a router holds: its routing tables. -/
+/-- What a router holds: its routing tables, and the IPsec sessions it has up. -/
 structure RouterState where
   /-- The main RIB: its active routes. -/
   main : Array Route := #[]
@@ -55,6 +57,8 @@ structure RouterState where
   bgpBest : Array Route := #[]
   /-- The add-path identifiers the router has given the routes it sends. -/
   pathIds : Array (Route × Nat) := #[]
+  /-- The IPsec links whose security associations are up (`IpsecLink.key`). -/
+  ipsec : Array (String × Ip) := #[]
   deriving DecidableEq, Inhabited, Repr
 
 /-- An OSPF adjacency on which a router receives routes. -/
@@ -72,6 +76,29 @@ structure BgpLink where
   /-- The session, seen from the receiving router. -/
   session : Bgp.Session
   deriving Inhabited
+
+/-- An IPsec session a router can protect packets with: one of its peer configurations
+paired with a peer that negotiates with it (`Ipsec.topology`). Whether its security
+association is up is part of the router's state. -/
+structure IpsecLink where
+  /-- The router's peer configuration. -/
+  name : String
+  localAddress : Ip
+  /-- The peer's address. -/
+  remoteAddress : Ip
+  /-- The tunnel interface (route-based VPN), or none for a crypto map. -/
+  tunnelInterface : Option String
+  sourceInterface : String
+  /-- The crypto-map ACL selecting the packets to protect. -/
+  acl : Option IpAccessList
+  /-- How packets are protected: the negotiated phase-2 proposal. -/
+  proposal : IpsecPhase2Proposal
+  /-- The index of the peer's router. -/
+  peer : Nat
+  deriving Inhabited
+
+/-- The router state names an IPsec link by its configuration and peer. -/
+def IpsecLink.key (l : IpsecLink) : String × Ip := (l.name, l.remoteAddress)
 
 /-- What peers outside the network announce to a router: each route with the address of
 the peer that sends it. -/
@@ -102,6 +129,8 @@ structure Router where
   /-- Where the router's interfaces lead: interface name, a remote address on the link, and
   the router owning it. -/
   links : Array (String × Ip × Nat)
+  /-- The IPsec sessions the router can have. -/
+  ipsecLinks : Array IpsecLink := #[]
   deriving Inhabited
 
 /-! ## Selecting routes -/
@@ -391,9 +420,9 @@ def step (net : Array Router) (r : Router) (X : Nat → RouterState) (input : In
   let sent ← collect r.addPathSessions.toList fun s => return (← r.exportPairs new s).map (·.1)
   return { new with pathIds := ← r.assignPathIds old.pathIds sent }
 
-/-- The router's state after it updates. Where Batfish would fail, the router keeps its
-state. -/
-def update (net : Array Router) (r : Router) (X : Nat → RouterState) (input : Input) :
+/-- The router's routing tables after it updates. Where Batfish would fail, the router keeps
+its state. The update of IPsec sessions is `Router.update`. -/
+def updateRoutes (net : Array Router) (r : Router) (X : Nat → RouterState) (input : Input) :
     RouterState :=
   match r.step net X input with
   | .ok s => s

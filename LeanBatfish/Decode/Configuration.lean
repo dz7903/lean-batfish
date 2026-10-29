@@ -69,12 +69,6 @@ def configuration : Decoder Configuration := object do
   -- Only read together with gated features (zones, layer-1 topology).
   ignoreAll ["defaultCrossZoneAction", "disconnectAdminDownInterfaces"]
   gate "defaultInboundAction" "default-deny inbound action" isPermitOrNull
-  gateEmpty "ikePhase1Keys" "IPsec"
-  gateEmpty "ikePhase1Policies" "IPsec"
-  gateEmpty "ikePhase1Proposals" "IPsec"
-  gateEmpty "ipsecPeerConfigs" "IPsec"
-  gateEmpty "ipsecPhase2Policies" "IPsec"
-  gateEmpty "ipsecPhase2Proposals" "IPsec"
   gateEmpty "mlags" "MLAG"
   gateEmpty "packetPolicies" "policy-based routing"
   gateEmpty "trackingGroups" "tracking"
@@ -98,7 +92,13 @@ def configuration : Decoder Configuration := object do
     communitySets := ← named "communitySets" (array community)
     asPathAccessLists := ← named "asPathAccessLists" asPathAccessList
     asPathExprs := ← named "asPathExprs" asPathExpr
-    asPathMatchExprs := ← named "asPathMatchExprs" asPathMatchExpr }
+    asPathMatchExprs := ← named "asPathMatchExprs" asPathMatchExpr
+    ikePhase1Keys := ← named "ikePhase1Keys" ikePhase1Key
+    ikePhase1Policies := ← named "ikePhase1Policies" ikePhase1Policy
+    ikePhase1Proposals := ← named "ikePhase1Proposals" ikePhase1Proposal
+    ipsecPeerConfigs := ← named "ipsecPeerConfigs" ipsecPeerConfig
+    ipsecPhase2Policies := ← named "ipsecPhase2Policies" ipsecPhase2Policy
+    ipsecPhase2Proposals := ← named "ipsecPhase2Proposals" ipsecPhase2Proposal }
 
 /-- Decode every node of a `viModel` answer. The first rejection stops decoding. -/
 def network (answer : Json) : Except Rejection (Array Configuration) := do

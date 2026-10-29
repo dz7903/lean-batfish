@@ -1,6 +1,6 @@
 import LeanBatfish.IR.Snapshot
-import LeanBatfish.Model.Router
-import LeanBatfish.Semantics.Forwarding.Fib
+import LeanBatfish.Model.Forwarding
+import LeanBatfish.Semantics.Ipsec
 import LeanBatfish.Theory.DataPlane
 
 /-!
@@ -16,11 +16,16 @@ a peer may send anything, at any time: what it sends is the router's input. Choo
 devices to model therefore chooses what the environment controls; leaving out a device
 makes its announcements arbitrary.
 
-**The data plane.** A router forwards a packet by its destination address: it accepts
-packets for its own addresses, and otherwise looks up its FIB, computed from its main RIB as
-Batfish does. A packet sent out of an interface goes to the router on the link that owns
-the address it is sent to; if no modeled router owns it, the packet leaves the network.
-Packet filters (ACLs) are not modeled yet.
+**The data plane.** A router forwards a packet as `Router.forward` says: by its
+destination, through its FIB, wrapping and unwrapping tunneled packets. Packet filters
+(ACLs) are not modeled yet.
+
+**Tunnels.** Batfish's layer-3 edges between tunnel interfaces are left out: a tunnel is
+not a link here, but packets wrapped and routed through the underlay. The IPsec sessions a
+router can have are those Batfish's negotiation establishes in both directions (or with a
+dynamic responder); whether each is up is the router's state. Routing protocols over
+tunnels are not modeled yet, nor IPsec whose tunnel interface is in another VRF than its
+source interface.
 -/
 
 namespace LeanBatfish.Model
@@ -57,63 +62,44 @@ def quiet (N : Network) : Fin N.size → Input := fun _ => #[]
 
 /-! ## Forwarding -/
 
-/-- Whether `ip` is an address of an active interface of the router. -/
-def _root_.LeanBatfish.Model.Router.owns (r : Router) (ip : Ip) : Bool :=
-  r.config.interfaces.any fun (_, i) =>
-    i.active && i.vrf == r.vrf.name && i.allAddresses.any (·.ip == ip)
+/-- A router's action as a hop of the network's data plane: a packet sent to a router
+that is not in the network leaves it. -/
+def hop (N : Network) : Out → Theory.Hop N.size Packet
+  | .send j q => if h : j < N.size then .forward ⟨j, h⟩ q else .exit
+  | .accept => .accept
+  | .drop => .drop
+  | .exit => .exit
 
-/-- The FIB actions for destination `dst` in a main RIB: those of the longest-matching
-forwarding routes. -/
-def fibActions (r : Router) (main : Array Route) (dst : Ip) : EvalM (Array FibAction) := do
-  let rib := Rib.ofRoutes main
-  let mut out := #[]
-  for route in Bgp.lpm rib dst do
-    for a in ← resolveActions r.config r.vrf rib route none [] 0 do
-      if !out.contains a then out := out.push a
-  return out
-
-/-- What router `i` in state `x` does with a packet to `dst`. -/
-def forward (N : Network) (i : Fin N.size) (x : RouterState) (dst : Ip) :
-    List (Theory.Hop N.size) :=
-  let r := N.routers[i]
-  if r.owns dst then [.accept] else
-  match fibActions r x.main dst with
-  | .error _ => [.drop]
-  | .ok actions =>
-    if actions.isEmpty then [.drop] else
-    actions.toList.map fun (a : FibAction) => match a with
-      | .discard => .drop
-      | .forward iface arpIp =>
-        let target := arpIp.getD dst
-        match r.links.find? fun (name, ip, _) => name == iface && ip == target with
-        | some (_, _, j) => if h : j < N.size then .forward ⟨j, h⟩ else .exit
-        | none => .exit
+/-- What router `i` in state `x` does with packet `p`. -/
+def forward (N : Network) (i : Fin N.size) (x : RouterState) (p : Packet) :
+    List (Theory.Hop N.size Packet) :=
+  (N.routers[i].forward x p).map N.hop
 
 /-- The data plane of states `X`. -/
-def dataPlane (N : Network) (X : Fin N.size → RouterState) : Theory.DataPlane N.size Ip :=
+def dataPlane (N : Network) (X : Fin N.size → RouterState) : Theory.DataPlane N.size Packet :=
   N.system.dataPlane N.forward X
 
-/-- In states `X`, a packet to `dst` sent by device `src` can be accepted by device `tgt`
+/-- In states `X`, packet `p` sent by device `src` can be accepted by device `tgt`
 (default VRFs). -/
-def Delivers (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src tgt : String) : Prop :=
-  ∃ i j, N.find? src = some i ∧ N.find? tgt = some j ∧ (N.dataPlane X).Delivers dst i j
+def Delivers (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src tgt : String) : Prop :=
+  ∃ i j, N.find? src = some i ∧ N.find? tgt = some j ∧ (N.dataPlane X).Delivers p i j
 
-/-- In states `X`, no packet to `dst` sent by device `src` is accepted by device `tgt`. -/
-def Isolated (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src tgt : String) : Prop :=
-  ∀ i j, N.find? src = some i → N.find? tgt = some j → ¬ (N.dataPlane X).Delivers dst i j
+/-- In states `X`, packet `p` sent by device `src` is never accepted by device `tgt`. -/
+def Isolated (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src tgt : String) : Prop :=
+  ∀ i j, N.find? src = some i → N.find? tgt = some j → ¬ (N.dataPlane X).Delivers p i j
 
-/-- In states `X`, a packet to `dst` sent by device `src` can leave the network. -/
-def Exits (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src : String) : Prop :=
-  ∃ i, N.find? src = some i ∧ (N.dataPlane X).Exits dst i
+/-- In states `X`, packet `p` sent by device `src` can leave the network. -/
+def Exits (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src : String) : Prop :=
+  ∃ i, N.find? src = some i ∧ (N.dataPlane X).Exits p i
 
 /-- A check of `Exits` by computation. -/
-def checkExits (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src : String) : Bool :=
+def checkExits (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src : String) : Bool :=
   match N.find? src with
-  | some i => (N.dataPlane X).canExit dst i
+  | some i => (N.dataPlane X).canExit p i
   | none => false
 
-theorem exits_of_check {N : Network} {X : Fin N.size → RouterState} {dst : Ip} {src : String}
-    (h : N.checkExits X dst src = true) : N.Exits X dst src := by
+theorem exits_of_check {N : Network} {X : Fin N.size → RouterState} {p : Packet} {src : String}
+    (h : N.checkExits X p src = true) : N.Exits X p src := by
   unfold checkExits at h
   split at h
   · rename_i i hi
@@ -121,27 +107,27 @@ theorem exits_of_check {N : Network} {X : Fin N.size → RouterState} {dst : Ip}
   · cases h
 
 /-- A check of `Delivers` by computation. -/
-def checkDelivers (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src tgt : String) : Bool :=
+def checkDelivers (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src tgt : String) : Bool :=
   match N.find? src, N.find? tgt with
-  | some i, some j => (N.dataPlane X).canDeliver dst i j
+  | some i, some j => (N.dataPlane X).canDeliver p i j
   | _, _ => false
 
 /-- A check of `Isolated` by computation. -/
-def checkIsolated (N : Network) (X : Fin N.size → RouterState) (dst : Ip) (src tgt : String) : Bool :=
+def checkIsolated (N : Network) (X : Fin N.size → RouterState) (p : Packet) (src tgt : String) : Bool :=
   match N.find? src, N.find? tgt with
-  | some i, some j => (N.dataPlane X).cannotDeliver dst i j
+  | some i, some j => (N.dataPlane X).cannotDeliver p i j
   | _, _ => true
 
-theorem delivers_of_check {N : Network} {X : Fin N.size → RouterState} {dst : Ip}
-    {src tgt : String} (h : N.checkDelivers X dst src tgt = true) : N.Delivers X dst src tgt := by
+theorem delivers_of_check {N : Network} {X : Fin N.size → RouterState} {p : Packet}
+    {src tgt : String} (h : N.checkDelivers X p src tgt = true) : N.Delivers X p src tgt := by
   unfold checkDelivers at h
   split at h
   · rename_i i j hi hj
     exact ⟨i, j, hi, hj, Theory.DataPlane.delivers_of_canDeliver _ h⟩
   · cases h
 
-theorem isolated_of_check {N : Network} {X : Fin N.size → RouterState} {dst : Ip}
-    {src tgt : String} (h : N.checkIsolated X dst src tgt = true) : N.Isolated X dst src tgt := by
+theorem isolated_of_check {N : Network} {X : Fin N.size → RouterState} {p : Packet}
+    {src tgt : String} (h : N.checkIsolated X p src tgt = true) : N.Isolated X p src tgt := by
   intro i j hi hj
   unfold checkIsolated at h
   rw [hi, hj] at h
@@ -189,14 +175,20 @@ def build (s : Snapshot) (modeled : String → Bool := fun _ => true) : EvalM Ne
     routers.findIdx? fun r => r.config.hostname == host && r.vrf.name == vrf
   let config? (host : String) : Option Configuration := configs.find? (·.hostname == host)
   let iface? (ni : NodeInterface) : Option Interface := (config? ni.host).bind (·.interfaces.find? ni.iface)
+  -- Tunnel interfaces, which wrap packets instead of leading somewhere.
+  let isTunnel (ni : NodeInterface) : Bool :=
+    (iface? ni).any (fun i => i.type == "TUNNEL" || i.tunnelConfig.isSome) ||
+      (config? ni.host).any (·.ipsecPeerConfigs.any (·.2.tunnelInterface == some ni.iface))
   -- Forwarding: where each interface leads.
   for e in s.topology.layer3 do
+    if isTunnel e.tail || isTunnel e.head then continue
     let (some ti, some hi) := (iface? e.tail, iface? e.head) | continue
     let (some t, some h) := (indexOf e.tail.host ti.vrf, indexOf e.head.host hi.vrf) | continue
     for a in hi.allAddresses do
       routers := routers.modify t fun r => { r with links := r.links.push (ti.name, a.ip, h) }
   -- OSPF adjacencies.
   for e in s.topology.ospf do
+    if isTunnel e.tail || isTunnel e.head then throw s!"OSPF over the tunnel {e.tail} is not modeled"
     let (some ti, some hi) := (iface? e.tail, iface? e.head) | continue
     let (some t, some h) := (indexOf e.tail.host ti.vrf, indexOf e.head.host hi.vrf) | continue
     let (some tp, some hp) := ((routers[t]!).ospf, (routers[h]!).ospf) | continue
@@ -212,6 +204,10 @@ def build (s : Snapshot) (modeled : String → Bool := fun _ => true) : EvalM Ne
   -- BGP sessions, between modeled routers or from a peer that is not modeled.
   for e in s.topology.bgp do
     let some hc := config? e.headHost | continue
+    let owner := Array.find? (fun (p : String × Interface) => p.2.allAddresses.any (·.ip == e.headIp))
+      hc.interfaces
+    if let some (name, _) := owner then
+      if isTunnel ⟨e.headHost, name⟩ then throw s!"BGP over the tunnel {e.headHost}[{name}] is not modeled"
     let receiver ← Bgp.endpoint hc e.tailIp
     let some h := indexOf e.headHost receiver.vrf | continue
     match config? e.tailHost with
@@ -232,6 +228,40 @@ def build (s : Snapshot) (modeled : String → Bool := fun _ => true) : EvalM Ne
       if out.additionalPaths then
         routers := routers.modify l.sender fun k =>
           { k with addPathSessions := k.addPathSessions.push out }
+  -- IPsec sessions: Batfish's negotiation must succeed both ways, or with a dynamic
+  -- responder for a crypto map. A route-based session needs tunnel interfaces on both ends.
+  let ipsec := Ipsec.topology configs
+  let peer? (id : Ipsec.PeerId) : Option (Configuration × IpsecPeerConfig) := do
+    let c ← config? id.host
+    return (c, ← c.ipsecPeerConfigs.find? id.name)
+  let routerOf (c : Configuration) (p : IpsecPeerConfig) : EvalM (Option Nat) := do
+    let some src := c.interfaces.find? p.sourceInterface | return none
+    if let some t := p.tunnelInterface.bind c.interfaces.find? then
+      if t.vrf != src.vrf then
+        throw s!"IPsec on {c.hostname}[{t.name}] with its source in another VRF is not modeled"
+    return indexOf c.hostname src.vrf
+  let link (p : IpsecPeerConfig) (name : String) (remote : Ip) (proposal : IpsecPhase2Proposal)
+      (peer : Nat) : IpsecLink :=
+    { name, localAddress := p.localAddress, remoteAddress := remote
+      tunnelInterface := p.tunnelInterface, sourceInterface := p.sourceInterface
+      acl := p.policyAccessList, proposal, peer }
+  for e in ipsec do
+    let some proposal := e.session.established | continue
+    let (some (ic, i), some (rc, r)) := (peer? e.initiator, peer? e.responder) | continue
+    let (some ti, some tr) := (← routerOf ic i, ← routerOf rc r) | continue
+    match r.kind with
+    | .static .. =>
+      let back := ipsec.any fun f => f.initiator == e.responder && f.responder == e.initiator &&
+        f.session.established.isSome
+      if back then
+        let l := link i e.initiator.name r.localAddress proposal tr
+        routers := routers.modify ti fun x => { x with ipsecLinks := x.ipsecLinks.push l }
+    | .dynamic _ =>
+      if i.tunnelInterface.isNone then
+        let l := link i e.initiator.name r.localAddress proposal tr
+        let l' := link r e.responder.name i.localAddress proposal ti
+        routers := routers.modify ti fun x => { x with ipsecLinks := x.ipsecLinks.push l }
+        routers := routers.modify tr fun x => { x with ipsecLinks := x.ipsecLinks.push l' }
   -- Configured neighbors with no session in the snapshot are peers outside it.
   for i in [0:routers.size] do
     let r := routers[i]!

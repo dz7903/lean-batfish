@@ -22,7 +22,7 @@ def runDynamics (N : Network) (maxSteps : Nat := 1000) : EvalM (Array RouterStat
     let get := fun k => X.getD k {}
     let mut Y := #[]
     for r in N.routers do
-      Y := Y.push (← r.step N.routers get #[])
+      Y := Y.push { ← r.step N.routers get #[] with ipsec := r.ikeStep N.routers get }
     if Y == X then return (X, t)
     X := Y
   throw "the dynamics did not converge"
@@ -53,20 +53,27 @@ def tablesDiffering (a b : RouterState) : List String :=
   [("main", sameRoutes a.main b.main), ("ospfIntra", sameRoutes a.ospfIntra b.ospfIntra),
    ("ospfInter", sameRoutes a.ospfInter b.ospfInter), ("ospfE1", sameRoutes a.ospfE1 b.ospfE1),
    ("ospfE2", sameRoutes a.ospfE2 b.ospfE2), ("bgp", sameRoutes a.bgp b.bgp),
-   ("bgpBest", sameRoutes a.bgpBest b.bgpBest), ("pathIds", sameRoutes a.pathIds b.pathIds)]
+   ("bgpBest", sameRoutes a.bgpBest b.bgpBest), ("pathIds", sameRoutes a.pathIds b.pathIds),
+   ("ipsec", sameRoutes a.ipsec b.ipsec)]
   |>.filter (!·.2) |>.map (·.1)
 
 /-- Whether the simulator's converged tables are a stable state of the dynamics: for each
-router that an update changes, the tables that change. -/
+router that an update changes, the tables that change. The simulator does not compute IPsec
+sessions; they are brought up on its tables first, until they settle. -/
 def unstableRouters (N : Network) (dp : DataPlane) : EvalM (Array (String × String × List String)) := do
-  let X : Array RouterState := N.routers.map fun r =>
+  let mut X : Array RouterState := N.routers.map fun r =>
     match dp.states.find? fun (h, v, _) => h == r.config.hostname && v == r.vrf.name with
     | some (_, _, st) => st
     | none => {}
+  for _ in [0:N.size + 1] do
+    let get := fun k => X.getD k {}
+    let Y := N.routers.map fun r => { get r.index with ipsec := r.ikeStep N.routers get }
+    if Y == X then break
+    X := Y
   let get := fun k => X.getD k {}
   let mut out := #[]
   for r in N.routers do
-    let y ← r.step N.routers get #[]
+    let y := { ← r.step N.routers get #[] with ipsec := r.ikeStep N.routers get }
     let d := tablesDiffering y (get r.index)
     if !d.isEmpty then out := out.push (r.config.hostname, r.vrf.name, d)
   return out
