@@ -56,6 +56,13 @@ across a provider they do not trust:
 * at convergence the tunnel is up and the packets arrive; and without the gateway's route
   into the tunnel they would reach the provider in the clear.
 
+`networks/ipsec-vpn2/Properties.lean` nests two tunnels: sites A and E are joined by a tunnel
+whose ends are in two regional networks B and D, and B and D are joined by a tunnel across a
+core C. At any time, a packet from A to E is encrypted twice whenever it is in C (by the
+site tunnel inside, the region tunnel outside), at least once in B and D, and in the clear
+only in the sites; only the four gateways add or remove a layer. Without B's route into the
+region tunnel, the packets would cross C encrypted once.
+
 This too follows from a general theorem: routers that route statically go through a few
 routing tables, so every way they may forward at any time can be enumerated, while the
 other routers are only assumed not to change packets; a property checked on all those ways
